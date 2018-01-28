@@ -1,0 +1,624 @@
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\SEC>cd
+C:\Users\SEC
+
+C:\Users\SEC>cd..
+
+C:\Users>cd/
+
+C:\>cd\
+
+C:\>cd..
+
+C:\>cddir
+'cddir' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\
+
+08/07/2015  02:27 AM    <DIR>          186f502915a472d21d
+07/22/2015  07:55 PM    <DIR>          42d82403d9af55722aa850
+05/03/2017  09:04 PM    <DIR>          AMD
+07/13/2015  08:14 AM    <DIR>          Cakewalk Content
+07/18/2017  11:56 AM    <DIR>          Cakewalk Projects
+10/07/2016  10:37 AM             6,455 CLDMA.LOG
+09/28/2016  07:30 PM                91 HaxLogs.txt
+07/24/2016  11:30 PM    <DIR>          Intel
+03/29/2017  11:09 PM    <DIR>          Logs
+09/22/2005  10:39 AM           894,976 msdia80.dll
+03/18/2017  04:03 PM    <DIR>          PerfLogs
+11/14/2017  02:54 PM    <DIR>          Program Files
+11/13/2017  10:26 PM    <DIR>          Program Files (x86)
+10/01/2015  10:21 PM             4,128 rsmodule.dat
+12/14/2011  10:24 PM    <DIR>          samsung
+04/07/2016  07:25 AM             1,406 SSDXFlashLog.zip
+08/07/2017  05:25 PM    <DIR>          Temp
+05/03/2017  09:10 PM    <DIR>          Users
+10/10/2017  04:30 PM    <DIR>          Windows
+11/05/2016  12:37 AM    <DIR>          Windows10Upgrade
+               5 File(s)        907,056 bytes
+              15 Dir(s)  319,570,444,288 bytes free
+
+C:\>cd Desktop
+The system cannot find the path specified.
+
+C:\>pwd
+'pwd' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>cd~
+'cd~' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>cd ~
+The system cannot find the path specified.
+
+C:\>cd
+C:\
+
+C:\>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\
+
+08/07/2015  02:27 AM    <DIR>          186f502915a472d21d
+07/22/2015  07:55 PM    <DIR>          42d82403d9af55722aa850
+05/03/2017  09:04 PM    <DIR>          AMD
+07/13/2015  08:14 AM    <DIR>          Cakewalk Content
+07/18/2017  11:56 AM    <DIR>          Cakewalk Projects
+10/07/2016  10:37 AM             6,455 CLDMA.LOG
+09/28/2016  07:30 PM                91 HaxLogs.txt
+07/24/2016  11:30 PM    <DIR>          Intel
+03/29/2017  11:09 PM    <DIR>          Logs
+09/22/2005  10:39 AM           894,976 msdia80.dll
+03/18/2017  04:03 PM    <DIR>          PerfLogs
+11/14/2017  02:54 PM    <DIR>          Program Files
+11/13/2017  10:26 PM    <DIR>          Program Files (x86)
+10/01/2015  10:21 PM             4,128 rsmodule.dat
+12/14/2011  10:24 PM    <DIR>          samsung
+04/07/2016  07:25 AM             1,406 SSDXFlashLog.zip
+08/07/2017  05:25 PM    <DIR>          Temp
+05/03/2017  09:10 PM    <DIR>          Users
+10/10/2017  04:30 PM    <DIR>          Windows
+11/05/2016  12:37 AM    <DIR>          Windows10Upgrade
+               5 File(s)        907,056 bytes
+              15 Dir(s)  319,569,104,896 bytes free
+
+C:\>cd Users\
+
+C:\Users>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users
+
+05/03/2017  09:10 PM    <DIR>          .
+05/03/2017  09:10 PM    <DIR>          ..
+10/17/2016  03:47 PM    <DIR>          Default.migrated
+05/03/2017  09:23 PM    <DIR>          Public
+11/14/2017  03:23 PM    <DIR>          SEC
+               0 File(s)              0 bytes
+               5 Dir(s)  319,569,104,896 bytes free
+
+C:\Users>Public
+'Public' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users>cd SEC
+
+C:\Users\SEC>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC
+
+11/14/2017  03:23 PM    <DIR>          .
+11/14/2017  03:23 PM    <DIR>          ..
+06/22/2015  06:10 AM    <DIR>          .android
+06/22/2015  06:09 AM    <DIR>          .AndroidStudio1.2
+08/05/2017  06:17 PM    <DIR>          .frostwire5
+01/26/2017  12:21 PM    <DIR>          .gimp-2.8
+11/14/2017  03:23 PM                51 .gitconfig
+01/26/2017  12:01 PM    <DIR>          .thumbnails
+11/06/2017  02:55 PM    <DIR>          .vscode
+11/05/2016  12:41 AM    <DIR>          3D Objects
+10/10/2017  05:30 PM    <DIR>          Contacts
+11/14/2017  03:18 PM    <DIR>          Desktop
+11/25/2014  02:18 PM               149 DiskScrP.txt
+11/09/2017  04:43 PM    <DIR>          Documents
+11/14/2017  02:58 PM    <DIR>          Downloads
+10/10/2017  05:30 PM    <DIR>          Favorites
+06/06/2015  11:23 AM    <DIR>          FrostWire
+09/28/2016  07:40 PM    <DIR>          Google Drive
+11/02/2017  03:07 PM    <DIR>          Links
+04/08/2017  05:15 PM         2,568,360 msinfo32.txt
+09/14/2017  05:07 PM    <DIR>          Music
+11/02/2017  03:07 PM    <DIR>          OneDrive
+11/14/2017  03:05 PM    <DIR>          Pictures
+12/14/2011  09:31 PM    <DIR>          Roaming
+10/10/2017  05:30 PM    <DIR>          Saved Games
+10/10/2017  05:30 PM    <DIR>          Searches
+06/08/2015  11:59 PM    <DIR>          Tracing
+09/14/2017  05:07 PM    <DIR>          Videos
+               3 File(s)      2,568,560 bytes
+              25 Dir(s)  319,569,002,496 bytes free
+
+C:\Users\SEC>cd Desktop
+
+C:\Users\SEC\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop
+
+11/14/2017  03:18 PM    <DIR>          .
+11/14/2017  03:18 PM    <DIR>          ..
+11/13/2017  01:45 PM    <DIR>          13 algorithms
+11/14/2017  02:58 PM            72,649 22528509_10104827064950325_736790663220034293_n.jpg
+11/13/2017  04:14 PM    <DIR>          Coding Dojo
+11/14/2017  03:19 PM    <DIR>          fake blog
+11/14/2017  02:53 PM        38,518,544 Git-2.15.0-64-bit.exe
+08/05/2017  05:56 PM             1,840 Spotify.lnk
+11/13/2017  12:01 AM            14,289 today's economy.docx
+               4 File(s)     38,607,322 bytes
+               5 Dir(s)  319,569,002,496 bytes free
+
+C:\Users\SEC\Desktop>cd
+C:\Users\SEC\Desktop
+
+C:\Users\SEC\Desktop>cd/
+
+C:\>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\
+
+08/07/2015  02:27 AM    <DIR>          186f502915a472d21d
+07/22/2015  07:55 PM    <DIR>          42d82403d9af55722aa850
+05/03/2017  09:04 PM    <DIR>          AMD
+07/13/2015  08:14 AM    <DIR>          Cakewalk Content
+07/18/2017  11:56 AM    <DIR>          Cakewalk Projects
+10/07/2016  10:37 AM             6,455 CLDMA.LOG
+09/28/2016  07:30 PM                91 HaxLogs.txt
+07/24/2016  11:30 PM    <DIR>          Intel
+03/29/2017  11:09 PM    <DIR>          Logs
+09/22/2005  10:39 AM           894,976 msdia80.dll
+03/18/2017  04:03 PM    <DIR>          PerfLogs
+11/14/2017  02:54 PM    <DIR>          Program Files
+11/13/2017  10:26 PM    <DIR>          Program Files (x86)
+10/01/2015  10:21 PM             4,128 rsmodule.dat
+12/14/2011  10:24 PM    <DIR>          samsung
+04/07/2016  07:25 AM             1,406 SSDXFlashLog.zip
+08/07/2017  05:25 PM    <DIR>          Temp
+05/03/2017  09:10 PM    <DIR>          Users
+10/10/2017  04:30 PM    <DIR>          Windows
+11/05/2016  12:37 AM    <DIR>          Windows10Upgrade
+               5 File(s)        907,056 bytes
+              15 Dir(s)  319,568,334,848 bytes free
+
+C:\>cd Users
+
+C:\Users>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users
+
+05/03/2017  09:10 PM    <DIR>          .
+05/03/2017  09:10 PM    <DIR>          ..
+10/17/2016  03:47 PM    <DIR>          Default.migrated
+05/03/2017  09:23 PM    <DIR>          Public
+11/14/2017  03:23 PM    <DIR>          SEC
+               0 File(s)              0 bytes
+               5 Dir(s)  319,568,334,848 bytes free
+
+C:\Users>cd SEC
+
+C:\Users\SEC>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC
+
+11/14/2017  03:23 PM    <DIR>          .
+11/14/2017  03:23 PM    <DIR>          ..
+06/22/2015  06:10 AM    <DIR>          .android
+06/22/2015  06:09 AM    <DIR>          .AndroidStudio1.2
+08/05/2017  06:17 PM    <DIR>          .frostwire5
+01/26/2017  12:21 PM    <DIR>          .gimp-2.8
+11/14/2017  03:23 PM                51 .gitconfig
+01/26/2017  12:01 PM    <DIR>          .thumbnails
+11/06/2017  02:55 PM    <DIR>          .vscode
+11/05/2016  12:41 AM    <DIR>          3D Objects
+10/10/2017  05:30 PM    <DIR>          Contacts
+11/14/2017  03:18 PM    <DIR>          Desktop
+11/25/2014  02:18 PM               149 DiskScrP.txt
+11/09/2017  04:43 PM    <DIR>          Documents
+11/14/2017  02:58 PM    <DIR>          Downloads
+10/10/2017  05:30 PM    <DIR>          Favorites
+06/06/2015  11:23 AM    <DIR>          FrostWire
+09/28/2016  07:40 PM    <DIR>          Google Drive
+11/02/2017  03:07 PM    <DIR>          Links
+04/08/2017  05:15 PM         2,568,360 msinfo32.txt
+09/14/2017  05:07 PM    <DIR>          Music
+11/02/2017  03:07 PM    <DIR>          OneDrive
+11/14/2017  03:05 PM    <DIR>          Pictures
+12/14/2011  09:31 PM    <DIR>          Roaming
+10/10/2017  05:30 PM    <DIR>          Saved Games
+10/10/2017  05:30 PM    <DIR>          Searches
+06/08/2015  11:59 PM    <DIR>          Tracing
+09/14/2017  05:07 PM    <DIR>          Videos
+               3 File(s)      2,568,560 bytes
+              25 Dir(s)  319,568,334,848 bytes free
+
+C:\Users\SEC>cd Desktop
+
+C:\Users\SEC\Desktop>md
+The syntax of the command is incorrect.
+
+C:\Users\SEC\Desktop>md newdir
+
+C:\Users\SEC\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop
+
+11/14/2017  04:19 PM    <DIR>          .
+11/14/2017  04:19 PM    <DIR>          ..
+11/13/2017  01:45 PM    <DIR>          13 algorithms
+11/14/2017  02:58 PM            72,649 22528509_10104827064950325_736790663220034293_n.jpg
+11/13/2017  04:14 PM    <DIR>          Coding Dojo
+11/14/2017  03:19 PM    <DIR>          fake blog
+11/14/2017  02:53 PM        38,518,544 Git-2.15.0-64-bit.exe
+11/14/2017  04:19 PM    <DIR>          newdir
+08/05/2017  05:56 PM             1,840 Spotify.lnk
+11/13/2017  12:01 AM            14,289 today's economy.docx
+               4 File(s)     38,607,322 bytes
+               6 Dir(s)  319,568,355,328 bytes free
+
+C:\Users\SEC\Desktop>md test
+
+C:\Users\SEC\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop
+
+11/14/2017  04:19 PM    <DIR>          .
+11/14/2017  04:19 PM    <DIR>          ..
+11/13/2017  01:45 PM    <DIR>          13 algorithms
+11/14/2017  02:58 PM            72,649 22528509_10104827064950325_736790663220034293_n.jpg
+11/13/2017  04:14 PM    <DIR>          Coding Dojo
+11/14/2017  03:19 PM    <DIR>          fake blog
+11/14/2017  02:53 PM        38,518,544 Git-2.15.0-64-bit.exe
+11/14/2017  04:19 PM    <DIR>          newdir
+08/05/2017  05:56 PM             1,840 Spotify.lnk
+11/14/2017  04:19 PM    <DIR>          test
+11/13/2017  12:01 AM            14,289 today's economy.docx
+               4 File(s)     38,607,322 bytes
+               7 Dir(s)  319,568,084,992 bytes free
+
+C:\Users\SEC\Desktop>NUL
+Access is denied.
+
+C:\Users\SEC\Desktop>copy NUL
+        1 file(s) copied.
+
+C:\Users\SEC\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop
+
+11/14/2017  04:19 PM    <DIR>          .
+11/14/2017  04:19 PM    <DIR>          ..
+11/13/2017  01:45 PM    <DIR>          13 algorithms
+11/14/2017  02:58 PM            72,649 22528509_10104827064950325_736790663220034293_n.jpg
+11/13/2017  04:14 PM    <DIR>          Coding Dojo
+11/14/2017  03:19 PM    <DIR>          fake blog
+11/14/2017  02:53 PM        38,518,544 Git-2.15.0-64-bit.exe
+11/14/2017  04:19 PM    <DIR>          newdir
+08/05/2017  05:56 PM             1,840 Spotify.lnk
+11/14/2017  04:19 PM    <DIR>          test
+11/13/2017  12:01 AM            14,289 today's economy.docx
+               4 File(s)     38,607,322 bytes
+               7 Dir(s)  319,567,716,352 bytes free
+
+C:\Users\SEC\Desktop>cd test
+
+C:\Users\SEC\Desktop\test>copy NUL
+        1 file(s) copied.
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:19 PM    <DIR>          .
+11/14/2017  04:19 PM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  319,567,065,088 bytes free
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:19 PM    <DIR>          .
+11/14/2017  04:19 PM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  319,566,209,024 bytes free
+
+C:\Users\SEC\Desktop\test>copy NUL index.html
+        1 file(s) copied.
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:34 PM    <DIR>          .
+11/14/2017  04:34 PM    <DIR>          ..
+11/14/2017  04:34 PM                 0 index.html
+               1 File(s)              0 bytes
+               2 Dir(s)  319,563,325,440 bytes free
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:34 PM    <DIR>          .
+11/14/2017  04:34 PM    <DIR>          ..
+11/14/2017  04:34 PM                 0 index.html
+               1 File(s)              0 bytes
+               2 Dir(s)  319,563,325,440 bytes free
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:34 PM    <DIR>          .
+11/14/2017  04:34 PM    <DIR>          ..
+11/14/2017  04:34 PM                 0 index.html
+               1 File(s)              0 bytes
+               2 Dir(s)  319,563,325,440 bytes free
+
+C:\Users\SEC\Desktop\test>copy NUL styles.css
+        1 file(s) copied.
+
+C:\Users\SEC\Desktop\test>copy NUL commands.txt
+        1 file(s) copied.
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:38 PM    <DIR>          .
+11/14/2017  04:38 PM    <DIR>          ..
+11/14/2017  04:38 PM                 0 commands.txt
+11/14/2017  04:34 PM                 0 index.html
+11/14/2017  04:37 PM                 0 styles.css
+               3 File(s)              0 bytes
+               2 Dir(s)  319,564,054,528 bytes free
+
+C:\Users\SEC\Desktop\test>copy index.html
+The file cannot be copied onto itself.
+        0 file(s) copied.
+
+C:\Users\SEC\Desktop\test>copy index.html index_2.html
+        1 file(s) copied.
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:42 PM    <DIR>          .
+11/14/2017  04:42 PM    <DIR>          ..
+11/14/2017  04:38 PM                 0 commands.txt
+11/14/2017  04:34 PM                 0 index.html
+11/14/2017  04:34 PM                 0 index_2.html
+11/14/2017  04:37 PM                 0 styles.css
+               4 File(s)              0 bytes
+               2 Dir(s)  319,571,800,064 bytes free
+
+C:\Users\SEC\Desktop\test>del styles.css
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:44 PM    <DIR>          .
+11/14/2017  04:44 PM    <DIR>          ..
+11/14/2017  04:38 PM                 0 commands.txt
+11/14/2017  04:34 PM                 0 index.html
+11/14/2017  04:34 PM                 0 index_2.html
+               3 File(s)              0 bytes
+               2 Dir(s)  319,573,356,544 bytes free
+
+C:\Users\SEC\Desktop\test>cd/
+
+C:\>cd\
+
+C:\>cd..
+
+C:\>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\
+
+08/07/2015  02:27 AM    <DIR>          186f502915a472d21d
+07/22/2015  07:55 PM    <DIR>          42d82403d9af55722aa850
+05/03/2017  09:04 PM    <DIR>          AMD
+07/13/2015  08:14 AM    <DIR>          Cakewalk Content
+07/18/2017  11:56 AM    <DIR>          Cakewalk Projects
+10/07/2016  10:37 AM             6,455 CLDMA.LOG
+09/28/2016  07:30 PM                91 HaxLogs.txt
+07/24/2016  11:30 PM    <DIR>          Intel
+03/29/2017  11:09 PM    <DIR>          Logs
+09/22/2005  10:39 AM           894,976 msdia80.dll
+03/18/2017  04:03 PM    <DIR>          PerfLogs
+11/14/2017  02:54 PM    <DIR>          Program Files
+11/13/2017  10:26 PM    <DIR>          Program Files (x86)
+10/01/2015  10:21 PM             4,128 rsmodule.dat
+12/14/2011  10:24 PM    <DIR>          samsung
+04/07/2016  07:25 AM             1,406 SSDXFlashLog.zip
+08/07/2017  05:25 PM    <DIR>          Temp
+05/03/2017  09:10 PM    <DIR>          Users
+10/10/2017  04:30 PM    <DIR>          Windows
+11/05/2016  12:37 AM    <DIR>          Windows10Upgrade
+               5 File(s)        907,056 bytes
+              15 Dir(s)  319,572,893,696 bytes free
+
+C:\>cd users
+
+C:\Users>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users
+
+05/03/2017  09:10 PM    <DIR>          .
+05/03/2017  09:10 PM    <DIR>          ..
+10/17/2016  03:47 PM    <DIR>          Default.migrated
+05/03/2017  09:23 PM    <DIR>          Public
+11/14/2017  03:23 PM    <DIR>          SEC
+               0 File(s)              0 bytes
+               5 Dir(s)  319,572,885,504 bytes free
+
+C:\Users>cd SEC
+
+C:\Users\SEC>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC
+
+11/14/2017  03:23 PM    <DIR>          .
+11/14/2017  03:23 PM    <DIR>          ..
+06/22/2015  06:10 AM    <DIR>          .android
+06/22/2015  06:09 AM    <DIR>          .AndroidStudio1.2
+08/05/2017  06:17 PM    <DIR>          .frostwire5
+01/26/2017  12:21 PM    <DIR>          .gimp-2.8
+11/14/2017  03:23 PM                51 .gitconfig
+01/26/2017  12:01 PM    <DIR>          .thumbnails
+11/06/2017  02:55 PM    <DIR>          .vscode
+11/05/2016  12:41 AM    <DIR>          3D Objects
+10/10/2017  05:30 PM    <DIR>          Contacts
+11/14/2017  04:26 PM    <DIR>          Desktop
+11/25/2014  02:18 PM               149 DiskScrP.txt
+11/09/2017  04:43 PM    <DIR>          Documents
+11/14/2017  02:58 PM    <DIR>          Downloads
+10/10/2017  05:30 PM    <DIR>          Favorites
+06/06/2015  11:23 AM    <DIR>          FrostWire
+09/28/2016  07:40 PM    <DIR>          Google Drive
+11/02/2017  03:07 PM    <DIR>          Links
+04/08/2017  05:15 PM         2,568,360 msinfo32.txt
+09/14/2017  05:07 PM    <DIR>          +----------------------------------------+
+11/02/2017  03:07 PM    <DIR>          ¦40: dir                                 ¦
+11/14/2017  03:05 PM    <DIR>          ¦41: cd test                             ¦
+12/14/2011  09:31 PM    <DIR>          ¦42: dir                                 ¦
+10/10/2017  05:30 PM    <DIR>          ¦43: cd..                                ¦
+10/10/2017  05:30 PM    <DIR>          ¦44: move .\test\index_2.html .\destinati¦
+06/08/2015  11:59 PM    <DIR>          ¦45: move .\destination\index_2.html .\te¦
+09/14/2017  05:07 PM    <DIR>          ¦46: move .\test\index_2.html .\destinati¦
+               3 File(s)      2,568,560¦47: dir                                 ¦
+              25 Dir(s)  319,573,401,60¦48: del destination                     ¦
+                                       ¦49: y                                   ¦
+C:\Users\SEC>cd desktop                +----------------------------------------+
+
+C:\Users\SEC\Desktop>md destination
+
+C:\Users\SEC\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop
+
+11/14/2017  04:52 PM    <DIR>          .
+11/14/2017  04:52 PM    <DIR>          ..
+11/13/2017  01:45 PM    <DIR>          13 algorithms
+11/14/2017  02:58 PM            72,649 22528509_10104827064950325_736790663220034293_n.jpg
+11/13/2017  04:14 PM    <DIR>          Coding Dojo
+11/14/2017  04:52 PM    <DIR>          destination
+11/14/2017  03:19 PM    <DIR>          fake blog
+11/14/2017  02:53 PM        38,518,544 Git-2.15.0-64-bit.exe
+08/05/2017  05:56 PM             1,840 Spotify.lnk
+11/14/2017  04:44 PM    <DIR>          test
+11/13/2017  12:01 AM            14,289 today's economy.docx
+               4 File(s)     38,607,322 bytes
+               7 Dir(s)  319,572,934,656 bytes free
+
+C:\Users\SEC\Desktop>cd test
+
+C:\Users\SEC\Desktop\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop\test
+
+11/14/2017  04:44 PM    <DIR>          .
+11/14/2017  04:44 PM    <DIR>          ..
+11/14/2017  04:38 PM                 0 commands.txt
+11/14/2017  04:34 PM                 0 index.html
+11/14/2017  04:34 PM                 0 index_2.html
+               3 File(s)              0 bytes
+               2 Dir(s)  319,573,520,384 bytes free
+
+C:\Users\SEC\Desktop\test>cd..
+
+C:\Users\SEC\Desktop>move .\test\index_2.html .\destination\
+        1 file(s) moved.
+
+C:\Users\SEC\Desktop>move .\destination\index_2.html .\test\
+        1 file(s) moved.
+
+C:\Users\SEC\Desktop>move .\test\index_2.html .\destination\
+        1 file(s) moved.
+
+C:\Users\SEC\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 2291-EB35
+
+ Directory of C:\Users\SEC\Desktop
+
+11/14/2017  04:52 PM    <DIR>          .
+11/14/2017  04:52 PM    <DIR>          ..
+11/13/2017  01:45 PM    <DIR>          13 algorithms
+11/14/2017  02:58 PM            72,649 22528509_10104827064950325_736790663220034293_n.jpg
+11/13/2017  04:14 PM    <DIR>          Coding Dojo
+11/14/2017  04:57 PM    <DIR>          destination
+11/14/2017  03:19 PM    <DIR>          fake blog
+11/14/2017  02:53 PM        38,518,544 Git-2.15.0-64-bit.exe
+08/05/2017  05:56 PM             1,840 Spotify.lnk
+11/14/2017  04:57 PM    <DIR>          test
+11/13/2017  12:01 AM            14,289 today's economy.docx
+               4 File(s)     38,607,322 bytes
+               7 Dir(s)  319,572,779,008 bytes free
+
+C:\Users\SEC\Desktop>del destination
+C:\Users\SEC\Desktop\destination\*, Are you sure (Y/N)? y
+
+C:\Users\SEC\Desktop>
