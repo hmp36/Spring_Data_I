@@ -20,43 +20,53 @@ import com.HP.login_reg.services.EventService;
 import com.HP.login_reg.services.MessageService;
 import com.HP.login_reg.services.UserService;
 
-
-
-
 @Controller
 @RequestMapping("/events")
 public class EventController {
 	private UserService userService;
 	private EventService eventService;
 	private MessageService messageService;
-	private Model model;
+	
 	private Object userStates;
 	private long event_id;
 	
-	public EventController(EventService eventService) {
+	public EventController(EventService eventService, UserService userService) {
 		this.eventService=eventService;
 		this.messageService=messageService;
 		this.userService=userService;
 	}
 	
 	@RequestMapping("")
-	public String events(@ModelAttribute("event")Event event,HttpSession session){
+	public String events(@ModelAttribute("event")Event event,HttpSession session,Model model){
+		System.out.println("************1");
 		long user_id =(long)session.getAttribute("id");
+		System.out.println("************2****"+user_id);
+
 		User user = userService.findById(user_id);
+		System.out.println(user);
 		
 		ArrayList<Event> userStates     = eventService.findByState(user.getState());
-//		ArrayList<Event> notUserStates = eventService.findNotByState(user.getState());
+		System.out.println("************4");
+
+		//		ArrayList<Event> notUserStates = eventService.findNotByState(user.getState());
 		model.addAttribute("userStates",userStates);
 //		model.addAttribute("notUserStates",notUserStates);
-		
+		System.out.println("************5");
+
 		ArrayList<Event> allEvents = (ArrayList<Event>)eventService.all();
 		ArrayList<Event> notUserStates = new ArrayList <Event>();
+		System.out.println("************6");
 		
 		for(int i=0;i<allEvents.size();i++) {
 			if( !allEvents.get(i).getState().equals( user.getState() ) )
+				System.out.println("************7");
+
 				notUserStates.add( allEvents.get(i) );
 		}		
+		System.out.println("************8");
+
 		model.addAttribute("notUserStates",notUserStates);
+		System.out.println("************9");
 		
 		return "events";
 	}
@@ -76,7 +86,7 @@ public class EventController {
 	}
 	
 	@PostMapping("/{id}/messages/new")
-	public String comment(@ModelAttribute("message") Message message,BindingResult res, @PathVariable("id") long id) {
+	public String comment(@Valid @ModelAttribute("message") Message message,BindingResult res, @PathVariable("id") long id) {
 		if(res.hasErrors()) {return "redirect:/events/"+event_id;}
 		
 		Event e =eventService.findById(event_id);
@@ -84,4 +94,26 @@ public class EventController {
 		messageService.create(message);
 		return "redirect:/events/"+event_id;
 		}
-}	
+	
+	@RequestMapping("/{id}/join")
+    public String join(@PathVariable("id") long event_id,HttpSession session) {
+		Event e = (Event)eventService.findById(event_id);
+		
+		long user_id = (long)session .getAttribute("id");
+		User u = (User)userService.findById(user_id);
+	
+		ArrayList<User> users = e.getUsers();
+		if(users == null) {
+			users = new ArrayList<User>();
+		users.add( u );
+		  
+		e.setUsers(users);
+		
+		eventService.update(e);
+		
+		return "redirect:/events/"+event_id;
+		
+		}	
+	}
+}
+

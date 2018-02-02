@@ -28,12 +28,12 @@
            <td>Action / Status</td>
  		</tr>
  		<c:forEach items="${userStates}" var="event">
- 			<td><a href="/events/${event.id}"></a>
+ 			<td><a href="/events/${event.id}">
  			${event.name}</a></td>
   			<td>${event.date}</td>
   			<td>${event.city}, ${event.state}</td>
   			
-  			<td></td>
+  			<td><a href="/events/${event.id}/join">Join</a></td>
  		
  	   </c:forEach>
  	</table>

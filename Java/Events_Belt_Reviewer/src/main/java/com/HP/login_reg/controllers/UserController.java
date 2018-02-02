@@ -41,18 +41,20 @@ this.userService=userService;
             return "register";
         }
         userService.create(user);
+        System.out.println(user.getFirstName());
         s.setAttribute("id", user.getId());
-        return "redirect:/dashboard";    
+        System.out.println(user.getId()+"*************user");
+        return "redirect:/events";    
         
     }
-    @RequestMapping("/dashboard")
-    public String dashboard(Model model, HttpSession s) {
-    	long id = (long) s.getAttribute("id");
-    	User user = userService.findById(id);
-    	
-    	model.addAttribute("currentUser", user);
-    	return "dashboard";
-    }    
+//    @RequestMapping("/")
+//    public String dashboard(Model model, HttpSession s) {
+//    	long id = (long) s.getAttribute("id");
+//    	User user = userService.findById(id);
+//    	
+//    	model.addAttribute("currentUser", user);
+//    	return "dashboard";
+//    }    
     @PostMapping("/login")
     public String login(RedirectAttributes flash, HttpSession s, @RequestParam(value="email", required=false) String email, @RequestParam(value="password", required=false) String password, Model model) {
         
@@ -63,7 +65,7 @@ this.userService=userService;
         }
         if (userService.isMatch(password,currentUser.getPassword())){
         	s.setAttribute("id", currentUser.getId());
-        	return "redirect:/dashboard";
+        	return "redirect:/events";
         }
         else {
         	flash.addFlashAttribute("passwordError","incorrect password!");
