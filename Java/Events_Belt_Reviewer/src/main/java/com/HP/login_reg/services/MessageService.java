@@ -29,4 +29,8 @@ public void destroy(long id) {
 public void update(Message message) {
 	create(message);
 	}
+public void addMessage(Message message) {
+	// TODO Auto-generated method stub
+	
+}
 }

@@ -27,7 +27,7 @@
 		
 		<c:forEach items= "${event.users}" var ="user">
 		<tr>
-			<td>${user.name}></td>
+			<td>${user.firstName}></td>
 			<td>${user.city}, ${user.state}</td>
 		</tr>	
 		</c:forEach>
