@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deck of Cards</title>
+</head>
+<body>
+    <script>
+        function Deck(){
+            this.deck = [];
+            this.new_deck = function() {
+            var suits = ['Clubs', 'Spades', 'Diamonds', 'Hearts']
+            var num = 0;
+            for (let suit in suits){
+                for (let i = 2; i <= 14; i++){
+                    num++;
+                    value = i;
+                    if(i == 11){
+                        value = 'Jack';
+                    }
+                    if(i == 12){
+                        value = 'Queen';
+                    }
+                    if(i == 13){
+                        value = 'king';
+                    }
+                    if(i == 14){
+                        value = 'Ace';
+                    }
+                    var card = {
+                        key: suits[suit],
+                        value: value,
+                        order: num,
+                    }
+                    this.deck.push(card);
+                }
+            }
+            }
+            this.new_deck();
+
+            this.shuffle = function() {
+            var copy = [], n = this.deck.length, i;
+
+            while (n) {
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * this.deck.length);
+                // If not already shuffled, move it to the new deck.
+                if (i in this.deck) {
+                copy.push(this.deck[i]);
+                delete this.deck[i];
+                n--;
+                }
+            }
+            this.deck = copy;
+            return this;
+            }
+            this.deal = function(hand){
+                var ran = Math.floor(Math.random() * 52)
+                var firstHalf = this.deck.slice(0, ran-1);
+                var secondHalf = this.deck.slice(ran,52);
+                for (let i = 0; i < secondHalf.length; i++){
+                    firstHalf.push(secondHalf[i]);
+                }
+                this.deck = firstHalf;
+                return this.deck[ran];
+            }
+            }
+            
+        var newDeck = new Deck;
+        newDeck.shuffle().deal();
+
+        function Player(name){
+                this.name = name;
+                this.hand = [];
+
+                this.draw = function(deck) {
+                    card = deck.deal();
+                    this.hand.push(card);
+                    return this;
+                }
+                this.discard = function() {
+                    this.hand.pop();
+                    return this;
+                }
+            }
+
+        const player1 = new Player("player1");
+
+        console.log(player1.draw(newDeck).draw(newDeck).discard());
+
+	</script>
+</body>
+</html>
