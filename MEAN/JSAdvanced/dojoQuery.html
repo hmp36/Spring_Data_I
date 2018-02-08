@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="mybutton">This is a great button.</button>
+  <button id="myotherbutton">This one is better.</button>
+  <div id="container"></div>
+  <script>
+  var $Dojo = (function() {
+    function makeAnObject(id) {
+      let el = document.getElementById(id);
+      return new MyDojoObject(el);
+    }
+    function MyDojoObject(element) {
+      this.element = element;
+      return this;
+    }
+    MyDojoObject.prototype.click = function(callback) {
+      this.element.addEventListener('click', callback);
+      return this;
+    }
+    MyDojoObject.prototype.hoover = function(oncallback, offcallback) {
+      this.element.addEventListener('mouseenter', oncallback);
+      this.element.addEventListener('mouseleave', offcallback);
+      return this;
+    }
+    return makeAnObject;
+  }());
+  function mouseon() {
+    let new_el = document.createElement('h1');
+    new_el.innerHTML = "YOU ARE HOVERIIIIIIIING!!!";
+    new_el.setAttribute('id', 'hover_box');
+    document.getElementById('container').appendChild(new_el);
+  }
+  function mouseoff() {
+    let parent = document.getElementById('container');
+    let child = document.getElementById('hover_box');
+    parent.removeChild(child);
+  }
+  $Dojo('mybutton').click(function() {alert("woohoo, you clicked the great button")});
+  $Dojo('myotherbutton').hoover(mouseon, mouseoff);
+  </script>
+</body>
+</html>

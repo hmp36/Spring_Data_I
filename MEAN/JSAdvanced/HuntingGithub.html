@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>click the button & get that name</title>
+</head>
+<body>
+  <button id="getName">Get that name.</button>
+  <div id="container"></div>
+  <script>
+  var button = document.getElementById('getName');
+  button.addEventListener('click', function() {
+    $.get('https://api.github.com/users/hmp36', displayName);
+  });
+  function displayName(data) {
+    let new_el = document.createElement('h2');
+    new_el.innerHTML = data.name;
+    document.getElementById('container').appendChild(new_el);
+  }
+  </script>
+</body>
+</html>
