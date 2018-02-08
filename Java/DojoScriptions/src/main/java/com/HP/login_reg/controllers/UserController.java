@@ -113,10 +113,10 @@ this.userService=userService;
 		}
 
     @PostMapping("/new")
-	public String create(@Valid @ModelAttribute ("event") User PackageType, Package packageCost, BindingResult res){
+	public String create(@Valid @ModelAttribute ("package") Package PackageType, BindingResult res){
 		
 			
-		PackageType.create(PackageType);
+		PackageService.create(PackageType);
 		return "redirect:/dashboard"; 
 	} 
     
