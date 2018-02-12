@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Dojo Message Board</h1>
+    <form method="post" action="/new">
+        Name:
+        <input type="text" name="name">
+        <br> Message:
+        <br>
+        <textarea name="text" id="" cols="30" rows="3"></textarea>
+        <br>
+        <input type="submit" value="Post Message">
+    </form>
+    <hr>
+    <% for( post of posts){ %>
+        <h3>name:
+            <%= post.name %>
+        </h3>
+        <h4>Message:
+            <%= post.text %>
+        </h4>
+        <% for( comment of post.comments){ %>
+            <p>name:
+                <%= comment.name %>
+            </p>
+            <p>comment:
+                <%= comment.text %>
+            </p>
+            <% } %>
+                <form action="/new/comment/<%= post.id %>" method="post">
+                    Name:
+                    <input type="text" name="name">
+                    <br> Comment:
+                    <br>
+                    <textarea name="text" id="" cols="30" rows="1"></textarea>
+                    <br>
+                    <input type="submit" value="Post Message">
+                </form>
+                <hr>
+                <% } %>
+</body>
+
+</html>
