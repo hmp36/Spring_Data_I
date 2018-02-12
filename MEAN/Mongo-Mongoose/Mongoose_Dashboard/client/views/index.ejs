@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Mongoose Dashboard</h1>
+    <form action="/new" method="post">
+        name:
+        <input type="text" name="name">
+        <br> age:
+        <input type="number" name="age">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <%for(x in mongooses){ %>
+        <p>name:
+            <%= mongooses[x].name %>, age:
+                <%= mongooses[x].age %>
+                    <a href="/mongooses/<%= mongooses[x].id %>">info</a> /
+                    <a href="/mongooses/edit/<%= mongooses[x].id %>">edit</a> /
+                    <a href="/mongooses/delete/<%= mongooses[x].id %>">delete</a>
+        </p>
+        <% } %>
+</body>
+
+</html>
