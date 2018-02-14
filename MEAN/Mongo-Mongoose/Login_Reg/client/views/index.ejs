@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1>Registration</H1>
+    <form action="/register" method="POST">
+        <p>
+            <label>First name:
+                <input name="first_name" type="text">
+            </label>
+        </p>
+        <p>
+            <label>Last name:
+                <input name="last_name" type="text">
+            </label>
+        </p>
+        <p>
+            <label>Email:
+                <input name="email" type="text">
+            </label>
+        </p>
+        <p>
+            <label>Password:
+                <input name="password" type="password">
+            </label>
+        </p>
+        <p>
+            <label>Confirm password:
+                <input name="confirm_password" type="password">
+            </label>
+        </p>
+        <p>
+            <label>Birthdate:
+                <input name="birthdate" type="date" max="2003-12-04">
+            </label>
+        </p>
+        <p class="hint">Note: You must be at least fourteen to register.</p>
+        <p>
+            <input type="submit" value="Register">
+        </p>
+    </form>
+    </div>
+    <div class="formwrapper">
+        <H1>Login</H1>
+        <form action="/login" method="POST">
+            <p>
+                <label>Email:
+                    <input type="text" name="email">
+                </label>
+            </p>
+            <p>
+                <label>Password:
+                    <input type="password" name="password">
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="Login">
+            </p>
+        </form>
+    </div>
+    <% if(typeof(errors) != 'undefined') { %>
+        <% for (var error of errors) { %>
+            <h4>
+                <%= error %>
+            </h4>
+            <% } %>
+                <% } %>
+
+
+
+</body>
+
+</html>
+</html>
