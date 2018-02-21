@@ -1,0 +1,9 @@
+cd into & run Mongod.exe
+
+cd into & run Mongo.exe
+
+cd into folder containing server.js & run nodemon server.js
+
+
+
+cd into app folder & run "npm install" "ng build --watch"
