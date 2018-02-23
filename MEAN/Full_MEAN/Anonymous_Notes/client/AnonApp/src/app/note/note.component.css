@@ -1,0 +1,45 @@
+#wrapper {
+  border: 1pt solid black;
+  margin: 20px;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+form {
+  border: 1pt solid black;
+  background-color: white;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+#notes {
+  border: 1pt solid black;
+  background-color: white;
+  padding: 20px 10px;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.note {
+  border: 1pt solid black;
+  margin-top: 10px;
+  min-height: 100px;
+}
+
+.timestamp {
+  text-align: right;
+  margin: 10px;
+}
+
+.noted {
+  margin: 10px;
+}
+
+#submit {
+  background-color: green;
+  color: white;
+}
+
+#submit:disabled {
+  background-color: #dddddd;
+}

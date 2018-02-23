@@ -1,0 +1,16 @@
+<div id="wrapper">
+    <h1>Anonymous Notes</h1>
+    <form (submit)="onSubmit()" #formData='ngForm'>
+        <label for="note">Note:</label>
+        <input type="text" name="note" id="note" required minlength="3" [(ngModel)]="note.note" #note_note="ngModel">
+        <input type="submit" value="Add Note" id="submit" [disabled]="formData.invalid">
+        <span *ngIf="note_note.errors?.required && note_note.dirty">Note is required</span>
+        <span *ngIf="note_note.errors?.minlength && note_note.dirty">Note must be at least 3 characters</span>
+    </form>
+    <div id="notes">
+        <div *ngFor="let noted of notes" class="note">
+            <p class="timestamp">Noted on: {{noted.createdAt | date : 'MMM d, y, h:mm:ss a'}}</p>
+            <p class="noted">{{noted.note}}</p>
+        </div>
+    </div>
+</div>
