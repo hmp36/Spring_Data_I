@@ -1,0 +1,225 @@
+How to full MEAN:
+
+//*** Server.js (should not change besides Angular folder path name)
+let express  = require("express");
+let bParse   = require("body-parser");
+let mongoose = require("mongoose");
+let cookie   = require("cookie");
+let bcrypt   = require("bcrypt");
+let path     = require("path");
+let app      = express();
+let port     = 8000;
+//Change this to the Angular path
+app.use(express.static(path.join(__dirname,'/client/public/dist')));
+app.use(bParse.json());
+app.use(bParse.urlencoded({ extended: true }));
+app.listen(port, function() {
+    console.log("listening on port "+port);
+});
+
+require("./server/config/mongoose.js");
+require("./server/config/routes.js")(app);
+//*** End Server.js
+
+Now open up cmd line, navigate to the root directory, and install these packages
+
+npm init
+npm install express --save
+npm install body-parser --save
+npm install mongoose --save
+npm install cookie --save
+npm install bcrypt --save
+
+(Optional) If you'd rather use session instead of cookie, install express-session and change that in the server.js file
+
+Now create these folder paths
+Angular app goes in here:
+/client/
+Node server files go in here:
+/server/
+Mongoose.js and routes.js go in here
+/server/config/
+Logic for the routes go in here (ex: UserController.js)
+/server/controllers/
+Model structures go in here (should match controllers ex: User.js)
+/server/models/
+
+//*** Mongoose.js (should not change besides database name)
+let mongoose  = require("mongoose");
+let fs        = require("fs");
+let path      = require("path");
+let modelPath = path.join(__dirname,"./../models");
+//Connect to your database here
+mongoose.connect("mongodb://localhost/database_name");
+mongoose.Promise = global.Promise;
+
+fs.readdirSync(modelPath).forEach(function(file) {
+    if(file.indexOf(".js") >= 0) {
+        require(modelPath+"/"+file);
+    }
+});
+//*** End mongoose.js
+
+//*** Routes.js
+let path              = require("path");
+let mongoose          = require("mongoose");
+//Sample UserController
+let UserController    = require("../controllers/UserController.js");
+//Put the rest of your controllers here
+
+module.exports = function(app){
+	//Create your API routes here. Here are the sample UserController routes
+    app.post("/server/users/login",UserController.login);
+    app.post("/server/users/register",UserController.register);
+
+	//Catch all route to send the user to the Angular app. Change "public" to your Angular app folder
+    app.all("*",(req,res,next)=>{
+        res.sendFile(path.resolve("./client/public/dist/index.html"))
+    });
+}
+//*** End routes.js
+
+//*** Sample UserController.js in /server/controllers/
+let User = require("mongoose").model("User");
+
+module.exports = {
+    register:function(req,res){
+		//Logic for creating a user and saving them in the database
+    },
+    login:function(req,res){
+		//Logic for logging in
+    },
+    cookie:function(req,res){
+        //Logic for creating a cookie
+    }
+
+}
+//*** End sample User.Controller.js
+
+//*** Sample User.js in /server/models/
+let mongoose = require("mongoose");
+let ObjectId = mongoose.Schema.Types.ObjectId;
+
+let User = mongoose.model("User",new mongoose.Schema({
+    firstName:{type:String},
+    lastName:{type:String},
+    email:{type:String},
+    password:{type:String},
+    confirm:{type:String},
+    bicycles:[{type:ObjectId,ref:"Bicycle"}]
+},{timestamps:true}));
+//*** End sample User.js
+
+Install Angular by going into client and typing ng new (Angular app name) --routing
+
+At this point you should test your node and Angular servers to make sure they're set up correctly.
+
+Run mongod.exe then set up your database and collections in Mongo based on the models you've made
+
+Open up a cmd line, navigate to your root folder, and type nodemon server.js
+Open up another cmd line, navigate to your Angular app folder inside root/client/Angular App/ and type in ng build --watch
+
+Now navigate to http://localhost:8000 and make sure you get the default Angular app.
+
+First thing you'll need to do when building your Angular app is to navigate to angularApp/src/app/
+Open up app.module.ts and add the following line to the imports:
+import { HttpClientModule } from '@angular/common/http';
+And HttpClientModule to the list of imports. This will allow angular to make http requests to our back-end.
+
+While you're still in your module.ts, you also need to add this line to the imports:
+import { FormsModule } from '@angular/forms';
+And FormsModule to the list of imports. This will allow you to use forms in your project.
+
+Now navigate back to your Angular app folder /src/app/ and open up app.component.html. Delete everything besides <router-outlet></router-outlet>
+This will allow Angular to load the correct component for the route you want to go to. So let's start making some components for our app.
+
+(Optional) If your app is going to be big with a bunch of components, it's nice to make a component folder in your Angular app /src/app/ folder. You'll need to do a bit more work to organize this though.
+Open up a new cmd line and navigate to your Angular app root folder inside root/client/Angular App/ and type ng g c user
+This will create a new user component for us to use for our login and registration page. So now we can set up our routing to use this component.
+
+Go to your Angular App /src/app/ and open up app-routing.module.ts  We'll first need to import our component so add the following line to the top of the file
+import { UserComponent } from './user/user.component';
+This will import the UserComponent class from the user component you just generated and allow you to load it when you hit a certain route.
+So let's set those routes. Add the following 2 lines inside of the routes array:
+{ path:'', pathMatch:'full', component:UserComponent },
+{ path: '**', redirectTo: '' }
+These 2 lines will load the user component if you go to the root route or any other route it doesn't match.
+When adding more routes (such as dashboard), be sure to add them before these lines so Angular will always load these last when looking for routes.
+
+Now we have a sample component set up to load a login/registration we need to make a service to talk from Angular to our back-end.
+(Optional) Again, if your app is going to use a lot of components you'll want to create a service for each component, otherwise you can just use one service. It also helps to create a service folder for all your services.
+If you have the cmd line you used to generate the component still open go ahead and type in ng g s user
+This will create a new service file inside angularApp/src/app/ called user.service.ts
+
+Before opening the service file it made we need to make sure Angular knows about it.
+Navigate to angularApp/src/app/ and open up app.module.ts.
+In this file, we need to add the following line to the top where all the imports are:
+import { UserService } from './user.service';
+We also need to add UserService in the providers array.
+
+Now open up that new service file it made. In order for us to make requests to the back-end from this service file, we need to add the following line to the top of the file:
+import { HttpClient } from '@angular/common/http';
+We also need to dependency inject this into our constructor. So modify the constructor line to look like this:
+constructor(private _http:HttpClient) { }
+
+So now while you're in your service file you can create all the API routes you made in your root/server/config/routes.js file. To do this, make a method for each route after the constructor. Example:
+register(user,cb){
+	this._http.post('/register',user)
+	.subscribe(data=>cb(data));
+}
+
+You'll need one of these methods for every method you make in the root/server/controllers/UserController in your back-end. This will make a post request to /register and send the data we'll make from a registration form to it.
+If you haven't set up the logic to insert the user into the database in your UserController, go ahead and do that now.
+
+Now we need a way to call this method in our service from our component. Go ahead and open up your user component in angularApp/src/app/user/user.component.ts
+Add the following two lines to the top of the file:
+import { UserService } from '../user.service';
+import { Router } from "@angular/router";
+If your user service is in a different location, modify the 'from' part to point to the service correctly.
+We're also importing the router class here so that we can redirect the user when they register or log in. You can either do this here or in the service if you want.
+Next you need to modify the component's constructor to create the user service and router variables like this:
+constructor(private _us:UserService, private _router:Router) { }
+
+With all that set up, we can make another register method but this time inside our component that calls the register method in our service.
+This should hook up everything from our front-end to our back-end. Here's a sample method for register:
+register(){
+    this._us.register(this.user,(data)=>{
+      if(data.errors){
+        console.log(data.errors);
+      }
+      else{
+        this._router.navigate(['/dashboard']);
+      }
+    });
+}
+
+When you make this method you'll notice that this.user is undefined because we haven't made it yet. To fix this you'll want to add a private variable above our constructor but still in our class like this:
+private user:any;
+
+But that's not all. We also need to initialize it. Inside our ngOnInit() method we need to structure what our data will look like. This should match the fields for the register form we will make. Here's a sample init method:
+this.user = {
+	first:"",
+	last:"",
+	email:"",
+	password:"",
+	confirm:""
+}
+
+It's good practice to make a new method called init() and call this method from the ngOnInit() method so we can clear this variable when we need to.
+Now all we need is to make a form in our component to send the data to this variable. Go ahead and open up your user component in angularApp/src/app/user/user.component.html
+Delete everything in the file and make a form like this:
+<form (submit)="register()">
+  {{ user | json }}
+  <p>First Name: <input type="text" name="user.first" [(ngModel)]="user.first"></p>
+  <!-- Rest of the input fields here -->
+  <input type="submit" value="Register">
+</form>
+
+So now we should have a semi-functioning registration Angular app that sends data from our front end into our backend. It's a little confusing but this is how the data flows:
+You type in information in this component html form. Each input field matches the variable we structured in our component ts file and is two way bound to that variable.
+That means when you type in information here, it gets updated in that variable we set up. Now when we click on submit, it calls the register method in our component ts file.
+From this register method it calls the register method in our user service file. This register method makes a post request to our server back-end. It will go into our UserController and call the register method there.
+In that register method it will put our data into the database and flow all the way back to our component once it's done.
+
+With all that knowledge you should be able to create new methods, components, services, and routes to finish the rest of your project.
+Good luck!
