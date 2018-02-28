@@ -14,6 +14,8 @@ class NotesController {
     }
 
     create(req, res) {
+        console.log(req.body);
+        
         Note.create(req.body, (err, note) => {
             if (err) {
                 return res.json(err);

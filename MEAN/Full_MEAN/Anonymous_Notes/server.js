@@ -12,7 +12,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Static Directory
-app.use(express.static(__dirname + '/client/AnonApp/dist'));
+app.use(express.static(__dirname + '/AnonApp/dist'));
 
 // Body Parser 
 const parser = require('body-parser');
@@ -83,7 +83,7 @@ const taskController = {
 
 // - - - - = = = = Routes = = = = - - - - 
 app 
-.all("**", (request, response) => { response.sendFile(path.resolve("./client/AnonApp/dist/index.html")) })
+.all("**", (request, response) => { response.sendFile(path.resolve("./AnonApp/dist/index.html")) })
 .get('/tasks', taskController.index)
 .post('/tasks', taskController.create)
 

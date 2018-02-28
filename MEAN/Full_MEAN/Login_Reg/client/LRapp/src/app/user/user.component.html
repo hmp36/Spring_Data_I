@@ -1,0 +1,37 @@
+<h1>Register:</h1>
+
+<div *ngIf="user.errors">
+</div>
+<h1 *ngFor="let err of user.errors">{{ err.message }} </h1>
+<form (submit)="register()">
+
+  
+  <p>First:
+    <input type="text" name="user.first" [(ngModel)]="user.firstName"></p>
+    <p>Last:
+    <input type="text" name="user.last" [(ngModel)]="user.lastName"></p>
+    <p>Email:
+    <input type="text" name="user.email" [(ngModel)]="user.email"></p>
+    <p>Password:
+    <input type="password" name="user.password" [(ngModel)]="user.password"></p>
+  
+  <!-- Rest of the input fields here -->
+  <input type="submit" value="Register">
+</form>
+
+<h1>Login:</h1>
+
+<h1 *ngIf="loggedUser.errors"> {{loggedUser.errors}}</h1>
+
+<form (submit)="login()">
+   
+  
+  <p>Email:
+    <input type="text" name="loggedUser.email" [(ngModel)]="loggedUser.email">
+  </p>
+  <p>Password:
+    <input type="password" name="loggedUser.password" [(ngModel)]="loggedUser.password">
+  </p>
+  
+  <input type="submit" value="Login">
+</form>
