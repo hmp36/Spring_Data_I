@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1>All-question-component</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <form>
+      <p>Search :
+        <input type='text' name='search' [(ngModel)]="strsearch">
+        <input type='submit' value='Search'>
+      </p>
+    </form>
+  </div>
+  <br>
+  <div *ngFor='let question of questions | search: strsearch ; let idx = index'>
+    <p>Question : {{question.title}}</p>
+    <p>Answers : {{question.answer}}</p>
+    <p>Action : {{question.action}}</p>
+    
+    <p>Url :
+      <img [src]="question.url" width="200" height="200">
+    </p>
+    <button *ngIf='currentUser !== question.userid' (click)='contact(question)'>Contact</button>
+    <button *ngIf='currentUser === question.userid' (click)='delete(question._id)'>Delete</button>
+  </div>
+
+</body>
+
+<div class="details">
+  <router-outlet></router-outlet>
+</div>
+
+
+</html>
+
+

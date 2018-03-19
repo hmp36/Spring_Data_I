@@ -1,0 +1,30 @@
+/* *{
+    outline: solid black 1px;
+} */
+.card{
+    border: 1px solid rgb(158, 155, 155);
+    margin-bottom: 5px;
+}
+.name{
+    margin-top: 5px;
+    margin-bottom: -4px;
+}
+.answer{
+    margin-left: 10px;
+    margin-top: 2;
+    display: inline-block;
+    width: 85%;
+}
+.answer h4 {
+    margin-top: -4px;
+    margin-bottom: -5px;
+}
+.answer p {
+    margin-top: -3px;
+}
+.like{
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}

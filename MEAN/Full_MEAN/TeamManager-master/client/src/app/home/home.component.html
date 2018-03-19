@@ -1,0 +1,139 @@
+<div class="_js_notifyBlock notifyBlock notifyBlock--invisible">
+    <div class="notifyBlock-inside">
+        <h4 class="captionBlock-title no-margin"> {{ notifyText }} </h4>
+    </div>
+</div>
+
+<div class="_tabs">
+    <button class="_tabs-item" [ngClass]="{ '_tabs-item--active' : activeTab === 'people' }" (click)="setTab('people')">
+        People
+    </button>
+    <button class="_tabs-item" [ngClass]="{ '_tabs-item--active' : activeTab === 'visuals' }" (click)="setTab('visuals')">
+        Visuals
+    </button>
+</div>
+
+<div class="container-fluid" [hidden]="activeTab !== 'people'">
+        <div class="topBlock">
+            <div class="searchBlock">
+                <button class="searchBlock-button" (click)="filterUsers()" > <i class="material-icons"> search </i> </button>
+                <input type="text" class="form-control searchBlock-input" placeholder="Name, Surname or Skill..." [(ngModel)]="searchValue">
+            </div>
+        </div>
+
+        <div class="captionBlock" *ngIf="!users[0]">
+            <h2 class="captionBlock-title"> There is no employees now. </h2>
+        </div>
+
+        <!--debug-->
+            <!--<br/> {{ userToWrite | json }} <br/>-->
+            <!--{{ prevStateUserToUpdate | json }}-->
+        <!-- end - debug-->
+        <div class="writeBlock" *ngIf="writeActive">
+            <h4 class="captionBlock-title text-{{ mode == 'edit' ? 'blue' : 'green' }}">
+                {{ mode == 'edit' ? 
+                   ('Edit ' + userToWrite.name_first + ' ' + userToWrite.name_last) : 
+                   'Create a new user' }}
+            </h4>
+            <div class="_table-row _table-row--grey clearfix">
+                <div class="_table-field col-sm-2">
+                    <label for="name_first"> First Name </label>
+                    <input id="name_first" class="form-control" type="text" [(ngModel)]="userToWrite.name_first">
+                </div>
+                <div class="_table-field col-sm-2">
+                    <label for="name_last"> Last Name </label>
+                    <input id="name_last" class="form-control" type="text" [(ngModel)]="userToWrite.name_last">
+                </div>
+                <div class="_table-field col-sm-2">
+                    <label for="age"> Age </label>
+                    <input id="age" class="form-control" type="text" type="number" min="0" max="150" [(ngModel)]="userToWrite.age">
+                </div>
+                <div class="_table-field col-sm-2">
+                    <label for="skill_name"> Skill Name </label>
+                    <input id="skill_name" class="form-control" type="text" [(ngModel)]="userToWrite.skill.name">
+                </div>
+                <div class="_table-field col-sm-2">
+                    <label for="skill_level"> Skill Level </label>
+                    <input id="skill_level" class="form-control" type="number" min="1" max="3" [(ngModel)]="userToWrite.skill.level">
+                </div>
+                <div class="_table-field col-sm-2">
+                    <button class="_btn pull-left _btn--{{ mode == 'edit' ? 'blue' : 'green-1' }}"
+                            (click)="mode == 'edit' ? updateUser( userToWrite ) : addUser( userToWrite )"
+                            title="mode == 'edit' ? 'Save Changes' : 'Save new User'">
+                            <i class="material-icons">save</i>
+                    </button>
+                    <button class="_btn _btn--white pull-right" (click)="cancelWrite()" title="Cancel Changes"> <i class="material-icons">cancel</i> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="_table" [ngClass]="{ '_table--minimized' : isUsersTableMinimized }">
+            <div class="_table-row _table-row--dark clearfix">
+                <div class="_table-field col-sm-2"> Name </div>
+                <div class="_table-field col-sm-2"> Age </div>
+                <div class="_table-field col-sm-2"> Skill </div>
+                <div class="_table-field col-sm-2"> Level </div>
+                <div class="_table-field col-sm-2"> &nbsp; </div>
+                <div class="_table-field col-sm-2">
+                    <button class="_btn _btn--white pull-left" (click)="toggleTable()" title="{{ isUsersTableMinimized ? 'Expand' : 'Minimize' }} Table">
+                        <i class="material-icons"> {{ 'expand_' + (isUsersTableMinimized ? 'more' : 'less') }} </i>
+                    </button>
+                    <button class="_btn _btn--green-1 pull-right" (click)="startAdd()" title="Add a new Employee">
+                        <i class="material-icons"> add </i>
+                    </button>
+                </div>
+            </div>
+            <div class="_table-body">                
+                <div class="_table-row clearfix" [ngClass]="{ '_table-row--grey' : i % 2 == 0 }" *ngFor="let user of filteredUsers; let i = index">
+                    <div class="_table-field col-sm-2"> {{ user.name_first }} {{ user.name_last }} </div>
+                    <div class="_table-field col-sm-2"> {{ user.age }} </div>
+                    <div class="_table-field col-sm-2"> {{ user.skill.name }} </div>
+                    <div class="_table-field col-sm-2"> <i *ngFor="let item of _arrayService.getRange( user.skill.level )" class="material-icons text-golden">star</i> </div>
+                    <div class="_table-field col-sm-2">
+                        <button class="_btn _btn--red" (click)="deleteUser( user.idUser, i )" title="Delete User"> <i class="material-icons">delete</i> </button>
+                    </div>
+                    <div class="_table-field col-sm-2">
+                        <button class="_btn _btn--white" (click)="startEdit( user, i )" title="Start Edit"> <i class="material-icons">edit</i> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+<div class="container-fluid" [hidden]="activeTab !== 'visuals'">
+
+    <div class="col-sm-4">
+        <pieChart
+            [chartData]="skillsData"
+            [chartTitle]="skillsTitle"
+        ></pieChart>
+    </div>
+
+    <div class="col-sm-4">
+        <pieChart
+            [chartData]="levelsData"
+            [chartTitle]="levelsTitle"
+        ></pieChart>
+    </div>
+
+    <div class="col-sm-4">
+        <pieChart
+            [chartData]="agesData"
+            [chartTitle]="agesTitle"
+        ></pieChart>
+    </div>
+</div>
+
+
+<div class="_js_loadingBlock loadingBlock loadingBlock--invisible">
+    <div class="loadingBlock-inside">
+        <div class="loadingBlock-img">
+            <!-- TODO: get resource from current project server, not from "http://77.220.213.35:8080/img/cas-1" -->
+            <img src="http://77.220.213.35:8080/img/cas-1/ui/anim/spinner.svg" alt="loading animation">
+        </div>
+        <br>
+        <h3 class="loadingBlock-title"> Loading employees... </h3>
+    </div>
+</div>

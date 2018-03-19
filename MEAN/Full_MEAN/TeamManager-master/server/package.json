@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Alex Chaliy",
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "express": "4.15.3",
+    "lodash": "4.17.4",
+    "mongoose": "4.10.6",
+    "process-env": "1.1.0"
+  }
+}

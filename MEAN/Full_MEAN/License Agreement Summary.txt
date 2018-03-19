@@ -1,0 +1,17 @@
+In summary of the License Agreement:
+
+By purchasing the documents at WebDevDocs.com, you are granted a non-exclusive, non-transferable 
+license basis for personal or commercial purposes, without any rights to re-license, sublicense,
+distribute, assign, or transfer such license. (you are not granted copyright) to create a quantity
+of one copy of each document included. You may not rent, lease, loan or create derivative works 
+based upon the documents or any part thereof to resell, distribute, loan or giveaway.
+
+You are granted permission to:
+
+- Edit the document with your company information and to redistribute copies to clients, by print, 
+email, or website or other means of distribution.
+
+- You may place documents on your website as long as the documents are placed in a client area where 
+only your clients may download such documents by means of password protection. If you need suggestions
+or help on creating a password protected section on your website for your clients, please contact us
+at sales@webdevdocs.com and we will try to help.

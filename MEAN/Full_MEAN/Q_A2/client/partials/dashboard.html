@@ -1,0 +1,70 @@
+<div ng-controller="dashboardController">
+
+	<!-- <h1>Hi {{currUser}}!</h1> -->
+	<!-- <button>Logout</button> -->
+<!-- 	<a href="#/index"  ng-click="logout()">logout</a> <br> -->
+
+	<!-- <a href="#/new_question">Add a question!</a> -->
+
+<div class="ui menu">
+  <a class="item"><strong>Hi {{currUser}}!</strong></a>
+  <a class="item link" href="#/new_question">Add a question!</a>
+
+<div class="ui input">
+  <input type="text" placeholder="Search Questions"  ng-model="filter_name" class="dash_input">
+</div>
+
+  <div class="right menu">
+    <a class="item link" href="#/index"  ng-click="logout()">Log Out</a> <br>
+  </div>
+</div>
+
+<!-- 
+	<p>search <input ng-model="filter_name"></p>
+	<table>
+		<thead>
+			<tr>
+				<th>Question</th>
+				<th>Answers</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="q in all_questions | filter: filter_name">
+				<td>{{q.question}}</td>
+				<td>{{q.answers.length}}</td>
+				<td>
+					<a href="#/question/{{q._id}}">Show</a>
+					<a href="#/question/{{q._id}}/new_answer">Answer</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+ -->
+
+<!-- <div class="ui input focus to_center"> -->
+  <!-- <input type="text" placeholder="Search Questions"  ng-model="filter_name"> -->
+<!-- </div> -->
+
+<table class="ui single line table">
+  <thead>
+    <tr>
+      <th>Questions</th>
+      <th>Answers (count)</th>
+      <th>See More OR Propose and Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="q in all_questions | filter: filter_name">
+		<td>{{q.question}}</td>
+		<td>{{q.answers.length}}</td>
+		<td>
+			<a href="#/question/{{q._id}}">View full question</a>
+			&nbsp;&nbsp;/&nbsp;&nbsp;
+			<a href="#/question/{{q._id}}/new_answer">I have an answer!</a>
+		</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

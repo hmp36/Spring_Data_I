@@ -1,5 +1,6 @@
 <div id="wrapper">
     <h1>Anonymous Notes</h1>
+    {{note | json}}
     <form (submit)="onSubmit()" #formData='ngForm'>
         <label for="note">Note:</label>
         <input type="text" name="note" id="note" required minlength="3" [(ngModel)]="note.note" #note_note="ngModel">

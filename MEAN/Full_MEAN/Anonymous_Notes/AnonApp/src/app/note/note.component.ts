@@ -9,7 +9,7 @@ import { NoteService } from '../note.service';
 export class NoteComponent implements OnInit {
 
     note = { note: "" };
-    notes;
+    notes = []
 
     constructor(private _NoteService: NoteService) {
         
@@ -35,7 +35,9 @@ export class NoteComponent implements OnInit {
 
     getAll() {
         this._NoteService.all((res) => {
-            this.notes = res.reverse();
+            this.notes = res.json();
+            console.log(this.notes)
+            
         })
     }
 

@@ -1,0 +1,62 @@
+<div ng-controller="answerController"> 
+<!-- 
+<a href="#/">HOME</a> <br>
+<a href="#/question/{{question_id.id}}">Answer this question</a> <br>
+<a href="#/index" ng-click="logout()">logout</a> -->
+
+<div class="ui menu">
+  <span class="item"><strong><i><u>Share your thoughts</u></i></strong></span>
+  <a class="item link" href="#/">HOME</a>
+
+  <div class="right menu">
+    <a class="item link" href="#/index"  ng-click="logout()">Log Out</a> <br>
+  </div>
+</div>
+
+
+<!-- 	<form name="form">
+		<p>Your Answer</p>
+		<span ng-show="form.answer.$dirty && form.answer.$invalid">The answer must contain 5 characters</span>
+		<span ng-show="form.answer.$dirty && form.answer.$valid">Meets length requirement!</span>
+		<br>
+		<textarea ng-model="ans.answer" name="answer" ng-minlength="5" required></textarea>
+
+		<p>Supporting details for your answer (optional)</p>
+		<textarea ng-model="ans.supporting">&nbsp;</textarea>
+
+		<a href="#/">Cancel</a>
+		<button ng-click="submitAnswer(ans)" ng-disabled="form.answer.$invalid">Submit</button>
+	</form> -->
+
+<div id="answer_container">
+	<h2>{{questionInfo.question}}</h2>
+	<h4>{{questionInfo.description}}</h2>
+	<div class="ui form">
+		<form name="form">
+			<div class="field">
+				<label class="fonty">Your Answer</label>
+				<span ng-show="form.answer.$dirty && form.answer.$invalid" class="validation_red"><i>The answer must contain 5 characters at minimum</i></span>
+				<span ng-show="form.answer.$dirty && form.answer.$valid" class="validation_green"><i>Meets length requirement!</i></span>
+				<br>
+				<textarea ng-model="ans.answer" name="answer" ng-minlength="5" required></textarea>
+			</div>
+			<div class="field">
+				<label class="fonty">Provide any supporting details (optional)</label>
+				<textarea rows="2" ng-model="ans.supporting"></textarea>
+			</div>
+
+			<button ng-click="submitAnswer(ans)" ng-disabled="form.answer.$invalid" class="fonty ui primary button">Submit</button>
+
+			<button  class="ui button fonty"><a href="#/">Cancel</a></button>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+</div>

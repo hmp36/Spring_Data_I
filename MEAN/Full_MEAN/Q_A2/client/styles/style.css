@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.Pulse(@duration) {
+  -webkit-animation-duration: @duration;
+  animation-duration: @duration;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+* {
+	border: think solid gray !important;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  padding: 4em;
+  font-family: 'Open Sans';
+}
+
+.banner {
+	margin-top: 40px;
+	position: relative;
+	font-size: 4rem;
+	font-weight: bold;
+	line-height: 4.5rem;
+	text-shadow: 0 2px #ddd;
+	.label {
+		text-shadow: none;
+		margin: 0;    
+	}
+	.ui.circular.label {
+		width: 2.25em;
+		height: 2.25em;
+		line-height: 1.25em;    
+	}
+}
+
+.fonty {
+	font-size: 1.5rem !important;
+}
+
+.intro {
+	margin-left: 50px;
+}
+
+.smaller_txt {
+	font-size: 2rem;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.validation_red {
+	color: red;
+	font-size: 1.5rem;
+}
+.validation_green {
+	color:green;
+	font-size: 1.5rem;
+}
+form {
+	margin-left: 50px;
+}
+input {
+	display: inline-block;
+}
+button {
+	display: inline-block;
+}
+
+.item {
+	font-size: 1.5rem;
+}
+.link {
+	color: #4183BC !important;
+}
+.to_center {
+	text-align: center !important;
+	margin-left: 300px !important;
+}
+
+.ui form {
+	margin-left: 10px !important;
+}
+
+.move_left {
+	margin-left: 40px !important;
+}
+
+
+.login_input {
+	width: 200px !important;
+}
+
+#answer_container {
+	margin-left: 35px;
+}
+
+textarea {
+	width: 550px !important;
+	font-size: 15px !important;
+}
+
+#questions_rolling {
+	width: 850px;
+	margin-left: 35px;
+}
+
+#show_container {
+	margin-left: 35px;
+}
+
+#new_qs {
+	margin-left: 35px;
+}
+
+#login_container {
+	/*text-align: center;*/
+	margin-top: 50px;
+	margin-left: 440px;
+}
+.dash_input {
+	width: 150px !important;
+	font-size: 13px;
+}
+
+.login_button {
+	width: 75px !important;
+	height: 40px !important;
+}

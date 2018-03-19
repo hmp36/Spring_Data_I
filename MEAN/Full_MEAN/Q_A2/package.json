@@ -1,0 +1,17 @@
+{
+  "name": "belt_exam",
+  "version": "1.0.0",
+  "description": "discussion board straight from platform",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Cheong",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.15",
+    "mongoose-deep-populate": "^3.0.0"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+<title>Study Buddy</title>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular-route.js"></script>
+    <script type="text/javascript" src="ngStorage.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script src="javascript/app.js"></script>
+
+    <script src="javascript/factories/userFactory.js"></script>
+    <script src="javascript/factories/questionFactory.js"></script>
+    <script src="javascript/factories/answerFactory.js"></script>
+
+
+    <script src="javascript/controllers/loginController.js"></script>
+    <script src="javascript/controllers/dashboardController.js"></script>
+    <script src="javascript/controllers/new_questionController.js"></script>
+    <script src="javascript/controllers/showController.js"></script>
+    <script src="javascript/controllers/answerController.js"></script>
+
+
+
+    <!-- for semantic -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/menu.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/table.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/input.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/message.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/button.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/label.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css">
+    
+    
+
+</head>
+<body>
+<div ng-view=""></div>
+</body>
+</html>

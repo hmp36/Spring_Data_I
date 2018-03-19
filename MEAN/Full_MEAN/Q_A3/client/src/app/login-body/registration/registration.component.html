@@ -1,0 +1,41 @@
+<fieldset>
+  <legend>Register</legend>
+  <form (submit)="createUser()">
+  
+    <label>Email:</label><br>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+        <p *ngIf="email.errors.required" style="color: red;">Email is required</p>      
+        <p *ngIf="email.errors.email && !email.errors.required" style="color: red;">Invalid Email format</p>
+    </div>
+    <input type="email" name="email" required email [(ngModel)]="newUser.email" #email="ngModel"><br>
+
+    <label>First Name:</label><br>
+    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+      <p *ngIf="firstName.errors.required" style="color: red;">First name is required</p>
+      <p *ngIf="firstName.errors.minlength" style="color: red;">First name must be at least 2 characters</p> 
+    </div>
+    <input type="text" name="first_name" required minlength="2" [(ngModel)]="newUser.first_name" #firstName="ngModel"><br>
+   
+    <label>Last Name:</label><br>
+    <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+      <p *ngIf="lastName.errors.required" style="color: red;">Last name is required</p>
+      <p *ngIf="lastName.errors.minlength" style="color: red;">Last name must be at least 2 characters</p>
+    </div>
+    <input type="text" name="last_name" required minlength="2" [(ngModel)]="newUser.last_name" #lastName="ngModel"><br>
+    
+    <label>Password:</label>
+    <small>(Password requires at least 1 capital letter, 1 number, and 1 special character )</small><br>
+    <input type="password" name="password" required minlength="8" [(ngModel)]="newUser.password" #password="ngModel"><br>
+    <div *ngIf="password.invalid && (password.dirty || password.touched)">
+      <p *ngIf="password.errors.required" style="color: red;">Password is required</p>
+      <p *ngIf="password.errors.minlength">Password must be at least 8 characters</p>
+    </div>
+
+    <label>Comfirmation:</label><br>
+    <input type="password" name="pwConfirm" required [(ngModel)]="newUser.password_confirm" #pwConfirm="ngModel"><br>
+    <div *ngIf="pwConfirm.invalid && (pwConfirm.dirty || pwConfirm.touched)">
+      <p *ngIf="pwConfirm.errors.required" style="color: red;">Comfirmation Password is required</p>
+    </div>
+    <input type="submit" value="Register">
+  </form>
+</fieldset>

@@ -1,0 +1,38 @@
+
+
+<div ng-controller="loginController">
+
+
+<!-- <h1>Q&A</h1> -->
+
+<div id="login_container">
+
+	<div class="ui column centered grid">
+	  <div class="banner">
+	    <div class="intro">StudyBuddy</div>
+	    <div class="intro"><span class="smaller_txt">Get your questions out there</span></div>
+	<!--     <div class="ui circular floating red large label ">1.0</div> -->
+	  </div>
+	</div>
+
+
+
+
+	<div class="ui two column centered grid move_left">
+		<div class="ui fluid search column">
+			<div class="ui fluid big icon input">
+				<form name="form">
+					<span ng-show="form.user_input.$dirty && form.user_input.$invalid" class="validation_red"><i>Username must be 3 characters in length!</i></span>
+					<span ng-show="form.user_input.$dirty && form.user_input.$valid" class="validation_green"><i>Meets length requirement!</i></span> 
+					<br>
+					<input type="text" ng-model="username" name="user_input" ng-minlength="3" required class="login_input" placeholder="Username Here...">
+
+					<button ng-click="enter(username)" ng-disabled="form.user_input.$invalid" class="ui primary button login_button">Enter</button>
+				</form>	
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</div>

@@ -1,0 +1,127 @@
+This document is a copy of the WebDevDocs.com License Agreement terms. This document does not constitute proof 
+of your license to use the WebDevDocs.com Document Packs. These License terms are subject to change without notice.
+
+The documents listed at Http://www.webdevdocs.com/documentlist.htm and which are grouped with this license,  sample 
+and actual forms, checklists, business documents and legal documents, along with the related documentation ("Documents")
+are licensed, not sold, to the Licensee by Website Design Documents (collectively referred to as "WebDevDocs.com") 
+for use only under the terms and conditions of this license ("License"). By copying, downloading, accessing or otherwise 
+using these documents, Licensee agrees to be bound by the terms of this License. If Licensee does not agree to the 
+terms of this License, Licensee must not copy, download, access or use the Documents, and Licensee must promptly delete
+any and all documents provided by WebDevDocs.com from his or her PC. If Maintenance Packs for the documents are ever 
+included, then the WebDevDocs.com Maintenance Terms will apply. Please keep this Proof of License in a safe place, as 
+it is Licensee's proof of license to copy and use the Documents, and it may be required for upgrade or support services.
+
+
+(1. License.)
+
+1. General License. Upon payment of all applicable fees and subject to the terms of this License, WebDevDocs.com grants
+to Licensee a non-exclusive, perpetual (unless terminated under Section 6), non-transferable license to create a quantity
+of one copy of each document included, and use such copy of the Documents on one single computer owned or leased by 
+Licensee.
+
+2. End User License Agreement. The terms and conditions stated in the end user license agreement ("EULA") provided with 
+the Documents will govern the use of each respective copy of the Documents used under this License, except that the EULA 
+does not constitute the granting of any additional license to the Documents.
+
+3. Upgrades & Updates. If the Documents is licensed as an update, then Licensee may only use the Documents to replace a 
+validly licensed version of the same documents. Licensee agrees that the update does not constitute the granting of a 
+second license to the Documents (i.e., Licensee may not use the upgrade or update in addition to the Documents it is 
+replacing, nor may Licensee transfer the Documents which is being replaced to a third party).
+
+
+(2. Restrictions.) 
+
+In addition to the restrictions stated in the respective EULA, the following restrictions apply.
+
+1. Other Limitations. LICENSEE MAY NOT RENT, LEASE, LOAN OR CREATE DERIVATIVE WORKS BASED UPON THE DOCUMENTS OR ANY PART 
+THEREOF TO RESELL OR LOAN.
+
+2. Transfer Restriction. LICENSEE MAY NOT TRANSFER OR ASSIGN ITS RIGHTS UNDER THIS LICENSE TO ANOTHER PARTY WITHOUT 
+WEBDEVDOCS.COM PRIOR WRITTEN CONSENT.
+
+3. Ownership. Licensee owns the documents on which is recorded or fixed, and is protected by United States and international
+copyright and other intellectual property laws. Licensee acknowledges that WebDevDocs.com and its licensors retain 
+ownership of the Documents itself. WebDevDocs.com reserves any rights not expressly granted to Licensee. The rights granted 
+are limited to WebDevDocs.com and its licensors' intellectual property rights in the Documents and do not include any other 
+patents or intellectual property rights.
+
+
+THIS LIMITED WARRANTY IS THE ONLY WARRANTY PROVIDED BY WEBDEVDOCS.COM AND ITS LICENSORS EXPRESSLY DISCLAIM ALL OTHER 
+WARRANTIES, CONDITIONS OR OTHER TERMS, EITHER EXPRESS OR IMPLIED (WHETHER COLLATERALLY, BY STATUTE OR OTHERWISE), INCLUDING
+BUT NOT LIMITED TO IMPLIED WARRANTIES, CONDITIONS OR OTHER TERMS OF MERCHANTABILITY, SATISFACTORY QUALITY AND/OR FITNESS 
+FOR A PARTICULAR PURPOSE WITH REGARD TO THE DOCUMENTS AND ACCOMPANYING WRITTEN MATERIALS. FURTHERMORE, THERE IS NO WARRANTY 
+AGAINST INTERFERENCE WITH LICENSEE'S ENJOYMENT OF THE DOCUMENTS. WEBDEVDOCS.COM DOES NOT WARRANT THAT THE OPERATION OF THE 
+DOCUMENTS WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE DOCUMENTS WILL BE CORRECTED. NO ORAL OR WRITTEN 
+INFORMATION OR ADVICE GIVEN BY WEBDEVDOCS.COM OR AN WEBDEVDOCS.COM AUTHORIZED REPRESENTATIVE SHALL CREATE A WARRANTY. 
+BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF IMPLIED WARRANTIES, CONDITIONS OR OTHER TERMS THE 
+ABOVE LIMITATION MAY NOT APPLY TO LICENSEE.
+
+(5. Exclusion and Limitation of Remedies and Damages.)
+
+All Documents are provided on a non-exclusive license basis for personal or commercial purposes, without any right to 
+re-license, sublicense, distribute, assign or transfer such license. Documents are provided for a charge and without any 
+representations or warranties, express or implied, as to their suitability, legal effect, completeness, current-ness, 
+accuracy, and/or appropriateness. THE DOCUMENTS ARE PROVIDED “AS IS,” “AS AVAILABLE,” AND WITH “ALL FAULTS,” AND WE AND 
+ANY PROVIDER OF THE DOCUMENTS DISCLAIM ANY WARRANTIES, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY AND 
+FITNESS FOR A PARTICULAR PURPOSE. The Documents may be inappropriate for your particular circumstances. Furthermore, state 
+laws may require different or additional provisions to ensure the desired result. You should consult with legal counsel to 
+determine the appropriate legal or business documents necessary for your particular transactions, as the Documents are 
+only samples and may not be applicable to a particular situation.
+
+1. Exclusion. In no event will webdevdocs.com, its parent, subsidiaries, or any of its licensors, directors, officers, 
+employees or affiliates of any of the foregoing be liable to licensee for any consequential, incidental, indirect or 
+special damages whatsoever (including without limitation, damages for loss of business profits, business interruption, 
+loss of business information and the like) or direct loss of business, business profits or revenue, whether foreseeable 
+or unforeseeable, arising out of the use of or inability to use the documents or accompanying written materials, 
+regardless of the basis of the claim (whether under contract, negligence or other tort or under statute or otherwise 
+howsoever arising) and even if webdevdocs.com or a webdevdocs.com representative has been advised of the possibility 
+of such damage.
+
+2. No Legal Advice or Attorney-Client Relationship. Information contained on or made available through the Site or 
+documents is not intended to and does not constitute legal advice, recommendations, mediation or counseling under any 
+circumstance and no attorney-client relationship is formed. We do not warrant or guarantee the accurateness, completeness, 
+adequacy or currency of the information contained in or linked through such Documents. Your use of information in such 
+Documents available is entirely at your own risk. We are not a law firm and we are also not a lawyer referral service.
+
+3. Limitation. WEBDEVDOCS.COM'S TOTAL LIABILITY TO LICENSEE FOR DAMAGES FOR ANY CAUSE WHATSOEVER NOT EXCLUDED BY SECTION 
+5(a) ABOVE HOWSOEVER CAUSED (WHETHER IN CONTRACT, NEGLIGENCE OR OTHER TORT, UNDER STATUTE OR OTHERWISE HOWSOEVER ARISING) 
+WILL BE LIMITED TO THE MONEY PAID FOR THE DOCUMENTS THAT CAUSED THE DAMAGES. THE PARTIES AGREE THAT THIS LIMITATION OF 
+REMEDIES AND DAMAGES PROVISION SHALL BE ENFORCED INDEPENDENTLY OF AND SURVIVE THE FAILURE OF ESSENTIAL PURPOSE OF ANY 
+WARRANTY REMEDY. THIS LIMITATION WILL NOT APPLY IN CASE OF DEATH OR PERSONAL INJURY CAUSED BY WEBDEVDOCS.COM'S NEGLIGENCE 
+ONLY WHERE AND TO THE EXTENT THAT APPLICABLE LAW REQUIRES SUCH LIABILITY. BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE 
+EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE LIMITATION OF LIABILITY IN THIS SECTION 
+
+4 MAY NOT APPLY TO LICENSEE. NOTHING IN THIS LICENSE AFFECTS OR PREJUDICES THE STATUTORY RIGHTS OF A CONSUMER ACQUIRING 
+THE DOCUMENTS OTHERWISE THAN IN THE COURSE OF A BUSINESS.
+
+5. Termination. If any breach of this License by Licensee continues for more than thirty (30) days after receipt of written 
+notice of such breach by WebDevDocs.com, WebDevDocs.com may terminate this License by written notice to Licensee, whereupon 
+this License and all rights granted to Licensee herein shall immediately cease. Licensee may terminate this License at any 
+time by providing written notice to WebDevDocs.com. In the event of any termination of this License, Licensee shall promptly return to WebDevDocs.com all copies of the Documents or verify in writing that all copies of the Documents have been destroyed. Sections 2 through 8 shall survive termination or cancellation of this License.
+
+6. Export Law Assurances. Licensee may not use or otherwise export or reexport the Documents except as authorized by United 
+States law and the laws of the jurisdiction in which the Documents was obtained. In particular, but without limitation, the 
+Documents may not be exported or reexported (a) into (or to a national or resident of) any U.S. embargoed countries 
+(currently Cuba, Iran, Iraq, Libya, North Korea, Sudan and Syria), or (b) to anyone on the U.S. Treasury Department's list 
+of Specially Designated Nationals or the U.S. Department of Commerce's Denied Person's List or Entity List. By using the 
+Documents, Licensee represents and warrants that it is not located in, under control of, or a national or resident of any 
+such country or on any such list.
+
+7. General Terms. If there is a local subsidiary of WebDevDocs.com in the country in which this License was purchased, then 
+the local law in which the subsidiary sits shall govern this License. Otherwise, this License shall be governed by the 
+laws of the United States and the State of Illinois. The parties agree that the United Nations Convention on Contracts for 
+the International Sale of Goods (1980), as amended, is specifically excluded from application to this License. This License 
+constitutes the entire agreement between the parties with respect to the Documents licensed under these terms, and it 
+supersedes all prior or contemporaneous agreement, arrangement and understanding regarding such subject matter. Licensee 
+acknowledges and agrees that it has not relied on any representations made by WebDevDocs.com, however, nothing in this 
+License shall limit or exclude liability for any representation made fraudulently. No amendment to or modification of 
+this License will be binding unless in writing and signed by WebDevDocs.com. If any provision of this License shall be 
+held by a court of competent jurisdiction to be contrary to law, that provision will be enforced to the maximum extent 
+permissible, and the remaining provisions of this License will remain in full force and effect. No failure or delay by 
+WebDevDocs.com in exercising its rights or remedies shall operate as a waiver unless made by specific written notice. 
+No single or partial exercise of any right or remedy of WebDevDocs.com shall operate as a waiver or preclude any other 
+or further exercise of that or any other right or remedy. All Documents provided to the U.S. Government pursuant to 
+solicitations issued on or after December 1, 1995 is provided with the commercial license rights and restrictions described 
+in this License. All Dcouments provided to the U.S. Government pursuant to solicitations issued prior to December 1, 1995 
+is provided with RESTRICTED RIGHTS as provided for in FAR, 48 CFR 52.227-14 (JUNE 1987) or DFAR, 48 CFR 252-227-7013 (OCT 
+1988), as applicable.

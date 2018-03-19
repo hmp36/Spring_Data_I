@@ -14,7 +14,7 @@ class NotesController {
     }
 
     create(req, res) {
-        console.log(req.body);
+        console.log("body", req.body);
         
         Note.create(req.body, (err, note) => {
             if (err) {

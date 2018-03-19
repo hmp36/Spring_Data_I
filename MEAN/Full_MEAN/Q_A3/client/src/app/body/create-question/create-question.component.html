@@ -1,0 +1,22 @@
+<a [routerLink]="['/dashboard']">Home</a> 
+
+<fieldset>
+  <legend>New Question</legend>
+  <form (submit)="createQuestion()">
+
+    <label>Question:</label><br>
+    <div *ngIf="question.invalid && (question.dirty || question.touched)">
+      <p *ngIf="question.errors.required" style="color: red;">Question is required</p>
+      <p *ngIf="question.errors.minlength && !question.errors.required" style="color: red;">question must me at least 10 characters</p>
+    </div>
+    <textarea name="question" required minlength="10" cols="30" rows="3" [(ngModel)]="newQuestion.question" #question="ngModel"></textarea><br>
+    
+    <label>Description:<small>(optional)</small></label><br>
+    <textarea name="description" cols="30" rows="3" [(ngModel)]="newQuestion.description"></textarea><br>
+    <br>
+    <button href [routerLink]="['/dashboard']">cancel</button>
+
+    <input type="submit" value="Post Question">
+    
+  </form>
+</fieldset>

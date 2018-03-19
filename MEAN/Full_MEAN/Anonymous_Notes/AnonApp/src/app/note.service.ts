@@ -9,9 +9,10 @@ export class NoteService {
     constructor(private _http: Http) { }
 
     all(callback) {
+        console.log("note service: all")
         this._http.get('/notes').subscribe(
-            (res) => {
-                callback(res.json());
+            (data) => {
+                callback(data);
             },
             (err) => {
                 console.log(err);
@@ -27,7 +28,7 @@ export class NoteService {
         
         this._http.post('/notes', data).subscribe(
             (res) => {
-                console.log("Jonathan is awesome")
+                console.log("data")
                 callback(data);
             },
             (err) => {

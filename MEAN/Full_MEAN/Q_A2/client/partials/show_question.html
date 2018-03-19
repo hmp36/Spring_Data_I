@@ -1,0 +1,61 @@
+<div ng-controller="showController">
+
+<!-- <a href="#/">HOME</a> <br>
+<a href="#/question/{{question_id.id}}/new_answer">Answer this question</a> <br>
+<a href="#/index" ng-click="logout()">logout</a>
+ -->
+
+<div class="ui menu">
+  <span class="item"><strong><i><u>The Question At Hand</u></i></strong></span>
+  <a class="item link" href="#/question/{{question_id.id}}/new_answer">Answer This Question!</a>
+  <a class="item link" href="#/">HOME</a>
+
+  <div class="right menu">
+    <a class="item link" href="#/index"  ng-click="logout()">Log Out</a> <br>
+  </div>
+</div>
+
+
+
+	<!-- <h3>{{deepQuestion.answers}}</h3> -->
+	
+<!-- 	<div ng-repeat="ans in deepQuestion.answers | orderBy: 'like':true">
+		<p>{{ans._user.username}}:</p>
+		<p>{{ans.answer}}</p>
+		<p>{{ans.supporting}}</p>
+		<p>{{ans.like}} LIKES <button ng-click="like(ans._id)">Like!</button></p>
+		<br><br>
+	</div> -->
+
+<div id="show_container">
+
+	<h2>{{deepQuestion.question}}</h2>
+	<h4>{{deepQuestion.description}}</h4>
+	<hr>
+
+	<div id="questions_rolling"  ng-repeat="ans in deepQuestion.answers | orderBy: 'like':true">
+		<div class="ui message">
+		  <div class="header">
+		    <u><i>{{ans._user.username}}</i></u> says: "{{ans.answer}}"
+		  </div>
+
+		    <p>{{ans.supporting}}</p>
+
+			<div class="ui compact menu">
+			  <a class="item">
+			    <i class="thumbs up icon" ng-click="like(ans._id)"></i>
+			    <div class="floating ui teal label bigger_like">{{ans.like}} </div>
+			  </a>
+			</div>
+
+
+		</div>
+
+
+
+		<br>
+	</div>
+
+</div>
+
+</div>

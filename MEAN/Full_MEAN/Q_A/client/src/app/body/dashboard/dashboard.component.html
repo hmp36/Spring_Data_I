@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+<p>Hi, {{user.firstName}} !            &nbsp;&nbsp;&nbsp;&nbsp;                    </p><a href='/logout'>logout</a>
+
+<a [routerLink]="['Add a Question']">Add a Question</a>         
+
+
+<app-all-questions></app-all-questions> |
+<div>
+<form>
+  <p>Search :
+    <input type='text' name='search' [(ngModel)]="strsearch">
+    <input type='submit' value='Search'>
+  </p>
+</form>
+</div>
+
+<br>
+<div>
+  <Table>
+    <tr> 
+      <th>Questions</th>
+      <th>Answers</th>
+      <th>Action </th>   
+    </tr>
+    <tr ng-repeat="question in questions | filter: filter">
+      <td>{{question.question}}</td>
+      <td>{{question.answers}}</td>
+      <td>
+        <a href="#!/question/{{question._id}}">Show</a>
+        <a href="#!/question/{{question._id}}/new_answer">Answer</a>
+      </td>
+    </tr>
+  </Table>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

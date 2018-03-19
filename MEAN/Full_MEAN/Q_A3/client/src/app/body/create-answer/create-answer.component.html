@@ -1,0 +1,23 @@
+<a [routerLink]="['/dashboard']">Home</a> |
+<a [routerLink]="['/dashboard/question', question._id]">Back to Question</a>
+
+<h2>{{question.question}}</h2>
+<p>{{question.description}}</p>
+<fieldset>
+  <legend>New Answer</legend>
+  <form (submit)="createAnswer()">
+
+    <label>Answer:</label><br>
+    <div *ngIf="answer.invalid && (answer.dirty || answer.touched)">
+      <p *ngIf="answer.errors.required" style="color: red;">Answer is required</p>
+      <p *ngIf="answer.errors.minlength && !answer.errors.required" style="color: red;">Answers must me at least 5 characters</p>
+    </div>
+    <textarea name="answer" required minlength="5" [(ngModel)]="newAnswer.answer" #answer="ngModel" cols="30" rows="3"></textarea><br>
+  
+    <label>Supporting details for your answer:<small>(optional)</small></label><br>
+    <textarea name="detail" cols="30" rows="3" [(ngModel)]="newAnswer.detail"></textarea>
+    <br>
+    <button href [routerLink]="['/dashboard']">cancel</button>
+    <input type="submit" value="Submit">
+  </form>
+</fieldset>
