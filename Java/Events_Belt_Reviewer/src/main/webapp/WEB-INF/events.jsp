@@ -38,7 +38,7 @@
  	   </c:forEach>
  	</table>
  	<h3>Events not in your state:</h3>
- 	
+ 	<table>
  		<c:forEach items="${notUserStates}" var="event">
  			<td><a href="/events/${event.id}"></a></td>
   			${event.name}</a></td>
@@ -46,7 +46,7 @@
   			<td>${event.city}, ${event.state}</td>
   			
   			<td></td>
- 		
+ 	</table>	
  		</c:forEach>
  	
  
