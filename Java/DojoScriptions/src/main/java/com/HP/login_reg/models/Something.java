@@ -1,12 +1,12 @@
 package com.HP.login_reg.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -21,13 +21,21 @@ public class Something{
     
     private String PackageCost; 
    
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-        name = "users_somethings", 
-        joinColumns = @JoinColumn(name = "something_id"), 
-        inverseJoinColumns = @JoinColumn(name = "user_id")
-)
+    
+    
+    
+//    @OneToMany(mappedBy="something", fetch=FetchType.LAZY)
+//    private List<User> users;
+    
+        
+    
+    
+//    public List<User> getUsers() {
+//		return users;
+//	}
+//	public void setUsers(List<User> users) {
+//		this.users = users;
+//	}
     
     
     public String getPackageType() {
@@ -52,6 +60,7 @@ public class Something{
 	public void setId(Long id) {
 		this.id = id;
 	}
+	
 }
 
 //	public String getDueDay() {

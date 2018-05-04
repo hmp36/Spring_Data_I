@@ -3,6 +3,7 @@ package com.HP.login_reg.models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,7 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Transient;
@@ -58,34 +59,42 @@ public class User{
 	}
 	 
 	
-	public String getUsers_roles() {
-		return users_roles;
-	}
-	public void setUsers_roles(String users_roles) {
-		this.users_roles = users_roles;
-	}
+//	public String getUsers_roles() {
+//		return users_roles;
+//	}
+//	public void setUsers_roles(String users_roles) {
+//		this.users_roles = users_roles;
+//	}
 	@Size(min=1,max=31,message="You must choose a date")
     private String dueDate  ;
    
    
     
-    @Transient
+//    @Transient
     private String passwordConfirmation;
-    @Column(updatable=false)
+//    @Column(updatable=false)
     @DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
     private Date createdAt;
     @DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
     private Date updatedAt;
    
-    @OneToOne(fetch = FetchType.LAZY)
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-        name = "users_somethings", 
-        joinColumns = @JoinColumn(name = "user_id"), 
-        inverseJoinColumns = @JoinColumn(name = "something_id"))
-    private List<Role> roles;
-	public String users_roles;
-	private Something packagetype;
+    
+//    @ManyToOne(fetch=FetchType.LAZY)
+//    @JoinColumn(name="something_id")
+//    private Something something;
+    
+    
+    
+//    @ManyToMany(fetch = FetchType.LAZY)
+//    @JoinTable(
+//        name = "users_roles", 
+//        joinColumns = @JoinColumn(name = "user_id"), 
+//        inverseJoinColumns = @JoinColumn(name = "role_id"))
+    
+//    
+//    private List<Role> roles;
+//	public String users_roles; // what do?
+//	private Something packagetype;
     
     public User() {
     }
@@ -150,12 +159,12 @@ public class User{
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-    public List<Role> getRoles() {
-        return roles;
-    }
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
+//    public List<Role> getRoles() {
+//        return roles;
+//    }
+//    public void setRoles(List<Role> roles) {
+//        this.roles = roles;
+//    }
     
     @PrePersist
     protected void onCreate(){
@@ -165,12 +174,27 @@ public class User{
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
-    public Something getPackageType() {
-        return packagetype;
-    }
-    public void setPackageType(Something packagetype) {
-        this.packagetype = packagetype;
-    }
+//    public Something getPackageType() {
+//        return packagetype;
+//    }
+//    public void setPackageType(Something packagetype) {
+//        this.packagetype = packagetype;
+//    }
+//	public Something getSomething() {
+//		return something;
+//	}
+//	public void setSomething(Something something) {
+//		this.something = something;
+//	}
+//	public Something getPackagetype() {
+//		return packagetype;
+//	}
+//	public void setPackagetype(Something packagetype) {
+//		this.packagetype = packagetype;
+//	}
+	public String getDueDate() {
+		return dueDate;
+	}
 		
 	
 }
