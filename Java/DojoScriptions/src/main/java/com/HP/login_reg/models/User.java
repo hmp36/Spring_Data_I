@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Transient;
@@ -75,14 +76,16 @@ public class User{
     private Date createdAt;
     @DateTimeFormat(pattern="MM:dd:yyyy HH:mm:ss")
     private Date updatedAt;
-    
+   
+    @OneToOne(fetch = FetchType.LAZY)
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "users_roles", 
+        name = "users_somethings", 
         joinColumns = @JoinColumn(name = "user_id"), 
-        inverseJoinColumns = @JoinColumn(name = "role_id"))
+        inverseJoinColumns = @JoinColumn(name = "something_id"))
     private List<Role> roles;
 	public String users_roles;
+	private Something packagetype;
     
     public User() {
     }
@@ -162,7 +165,12 @@ public class User{
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
-	
+    public Something getPackageType() {
+        return packagetype;
+    }
+    public void setPackageType(Something packagetype) {
+        this.packagetype = packagetype;
+    }
 		
 	
 }

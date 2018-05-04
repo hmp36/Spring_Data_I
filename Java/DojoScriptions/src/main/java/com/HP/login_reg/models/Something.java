@@ -1,12 +1,16 @@
 package com.HP.login_reg.models;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Package{
+public class Something{
     @Id
     @GeneratedValue
     private Long id;
@@ -18,13 +22,13 @@ public class Package{
     private String PackageCost; 
    
 
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(
-//        name = "users_events", 
-//        joinColumns = @JoinColumn(name = "event_id"), 
-//        inverseJoinColumns = @JoinColumn(name = "user_id")
-//)
-//    
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "users_somethings", 
+        joinColumns = @JoinColumn(name = "something_id"), 
+        inverseJoinColumns = @JoinColumn(name = "user_id")
+)
+    
     
     public String getPackageType() {
 		return PackageType;
@@ -48,28 +52,28 @@ public class Package{
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-
-	public String getDueDay() {
-		return DueDay;
-	}
-
-
-	public void setDueDay(String dueDay) {
-		DueDay = dueDay;
-	}
-
-
-	public String getPackage() {
-		return Package;
-	}
-
-
-	public void setPackage(String package1) {
-		Package = package1;
-	}
-
-
 }
+
+//	public String getDueDay() {
+//		return DueDay;
+//	}
+//
+//
+//	public void setDueDay(String dueDay) {
+//		DueDay = dueDay;
+//	}
+//
+//
+//	public String getPackage() {
+//		return Package;
+//	}
+//
+//
+//	public void setPackage(String package) {
+//		package = Package;
+//	}
+
+
+
  
     

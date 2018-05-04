@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.HP.login_reg.models.Event;
-import com.HP.login_reg.models.Package;
+import com.HP.login_reg.models.Something;
 import com.HP.login_reg.models.User;
-import com.HP.login_reg.services.PackageService;
+import com.HP.login_reg.services.SomethingService;
 import com.HP.login_reg.services.UserService;
 
 @Controller
@@ -102,22 +101,28 @@ this.userService=userService;
 
 
    @PostMapping("/selection")
-	public <dueDate> String select(@Valid @ModelAttribute("packageType") User packageType, BindingResult res, HttpSession session, dueDate duedate){
+	public <dueDate> String select(@Valid @ModelAttribute("packageType") Something packageType, BindingResult res, HttpSession session, dueDate duedate){
 		if(res.hasErrors()){return "package";}
 		session.setAttribute("duedate",duedate);
         session.setAttribute("package",packageType);
     
   
-		PackageService.select();
+		SomethingService.select();
 		return "redirect:/profile"; 
 		}
 
     @PostMapping("/new")
-	public String create(@Valid @ModelAttribute ("package") Package PackageType, BindingResult res){
+	public String create(@Valid @ModelAttribute ("package") Something PackageType, BindingResult res){
 		
-			
-		PackageService.create(PackageType);
+		
+		SomethingService.create(PackageType);
 		return "redirect:/dashboard"; 
+	}
+	public Object getHasErrors() {
+		return hasErrors;
+	}
+	public void setHasErrors(Object hasErrors) {
+		this.hasErrors = hasErrors;
 	} 
     
     
