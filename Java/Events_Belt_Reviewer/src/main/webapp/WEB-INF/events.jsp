@@ -8,19 +8,20 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
- <head>
- <title>Index</title>
- <link rel="stylesheet" type="text/css" href="/css/style.css">
- </head>
+ 	<head>
+ 			<title>Index</title>
+ <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/main.css">
+ 	</head>
  
  <body>
+ 	<div id="inyours">
  	<form action="/logout" method="get">
  		<p>
  			<input type="submit" value="Logout">
  		<p>
  	</form>
  
- <h3>Events in your state:</h3>
+ 		<h3>Events in your state:</h3>
   	<table>
  		<tr> 
            <td>Name</td>
@@ -35,20 +36,26 @@
   			<td>${event.city}, ${event.state}</td>
   			
   			<td><a href="/events/${event.id}/join">Join</a></td>
- 		
- 	   </c:forEach>
+ 		 	   </c:forEach>
+ 	   
  	</table>
+ 	</div>
+ 	
+ 	<div id="notinyours">
  	<h3>Events not in your state:</h3>
  	<table>
  		<c:forEach items="${notUserStates}" var="event">
  			<td><a href="/events/${event.id}"></a></td>
-  			${event.name}</a></td>
+  			<td><a>${event.name}</a></td>
   			<td>${event.date}</td>
   			<td>${event.city}, ${event.state}</td>
   			
   			<td></td>
- 	</table>	
+  			
+ 	
  		</c:forEach>
+ 	</table>		
+ 	</div>	
  	
  
  
