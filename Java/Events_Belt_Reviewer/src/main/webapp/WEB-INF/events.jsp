@@ -52,8 +52,6 @@
            <td>Location</td>
            <td>Action / Status</td>
  	</tr>
- 	
- 	
  		<c:forEach items="${notUserStates}" var="event">
  			<%-- <td><a href="/events/${event.id}"></a></td> --%>
   			<td><a>${event.name}</a></td>

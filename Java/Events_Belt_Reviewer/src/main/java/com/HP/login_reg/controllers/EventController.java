@@ -29,9 +29,9 @@ public class EventController {
 	private long event_id;
 	
 	public EventController(EventService eventService, UserService userService, MessageService messageService) {
-		this.eventService=eventService;
-		this.messageService=messageService;
-		this.userService=userService;
+		this.eventService = eventService;
+		this.messageService = messageService;
+		this.userService = userService;
 	}
 	
 	@RequestMapping("")
@@ -44,25 +44,18 @@ public class EventController {
 		System.out.println(user);
 		
 		ArrayList<Event> userStates = eventService.findByState(user.getState());
-		
-
-		ArrayList<Event> notUserStates = eventService.findNotByState(user.getState());
 		model.addAttribute("userStates",userStates);
-        model.addAttribute("notUserStates",notUserStates);
-		
-
+        		
 		ArrayList<Event> allEvents = (ArrayList<Event>)eventService.all();
-		ArrayList<Event> notUserStates1 = new ArrayList <Event>();
+		ArrayList<Event> notUserStates = new ArrayList <Event>();
 		
 		
 		for(int i=0;i<allEvents.size();i++) {
-			if( !allEvents.get(i).getState().equals( user.getState() ) )
-				
-
+			if( !allEvents.get(i).getState().equals(user.getState() ) ) 
 				notUserStates.add( allEvents.get(i) );
 		}		
 		
-
+	
 		model.addAttribute("notUserStates",notUserStates);
 		
 		
@@ -83,14 +76,20 @@ public class EventController {
 		return"showEvent";
 	}
 	
-	@PostMapping("/{event_id}/messages/new")
+	@PostMapping("/{id}/messages/new")
 	public String comment(@Valid @ModelAttribute("message") Message message,BindingResult res, @PathVariable("event_id") long event_id) {
-		if(res.hasErrors()) {return "redirect:/events/"+event_id;}
+		if(res.hasErrors()) {return "showEvent";}
+		message.setId(null);
+		messageService.create(message);
 		
 		Event e =eventService.findById(event_id);
+		
 		message.setEvent(e);
-		System.out.println(message.getText());	
-		messageService.create(message);
+		
+		eventService.create(e);
+		
+
+
 		return "redirect:/events/"+event_id;
 		}
 	

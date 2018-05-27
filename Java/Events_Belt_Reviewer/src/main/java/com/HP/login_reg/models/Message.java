@@ -47,8 +47,8 @@ public class Message {
 	public void setEvent(Event event) {
 	this.event = event;
 	}
-	public void setId(long id) {
-	this.id = id;
+	public void setId(invalid invalid) {
+	this.id = invalid;
 	}
 	public String getText() {
 	return text;
