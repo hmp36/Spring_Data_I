@@ -10,16 +10,17 @@
 <html>
  	<head>
  			<title>Index</title>
- <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/main.css">
+ <link rel="stylesheet" type="text/css" href="/css/main.css">
  	</head>
  
  <body>
- 	<div id="inyours">
  	<form action="/logout" method="get">
  		<p>
  			<input type="submit" value="Logout">
  		<p>
  	</form>
+ 	<div id="inyours">
+ 	
  
  		<h3>Events in your state:</h3>
   	<table>
