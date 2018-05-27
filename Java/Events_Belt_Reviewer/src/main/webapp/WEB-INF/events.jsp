@@ -12,10 +12,10 @@
  			 <title>Index</title>
 			 <link rel="stylesheet" type="text/css" href="/css/main.css">
 		<style>.a{
-    table-layout: fixed;
+    table-layout: auto;
     width: 100%;    
 }
-		</style>	 
+		</style>	  
     </head>
  
  <body>
@@ -25,13 +25,13 @@
  			<p>
  	</form>
  <div id="inyours">
- 	  		<h3>Events in your state:</h3>
+ 	  		<h3 class="h3">Events in your state:</h3>
   		<table class= "a">
  		<tr> 
            <td>Name</td>
            <td>Date</td>
            <td>Location</td>
-           <td>            Action / Status</td>
+           <td>Action / Status</td>
  		</tr>
  		<c:forEach items="${userStates}" var="event">
  			<td><a href="/events/${event.id}">
@@ -44,7 +44,7 @@
  		</table>
  </div>
  <div id="notinyours">
- 	<h3>Events not in your state:</h3>
+ 	<h3 class="h3">Events not in your state:</h3>
  	<table class= "a">
  	<tr> 
            <td>Name</td>
@@ -52,8 +52,10 @@
            <td>Location</td>
            <td>Action / Status</td>
  	</tr>
+ 	
+ 	
  		<c:forEach items="${notUserStates}" var="event">
- 			<td><a href="/events/${event.id}"></a></td>
+ 			<%-- <td><a href="/events/${event.id}"></a></td> --%>
   			<td><a>${event.name}</a></td>
   			<td>${event.date}</td>
   			<td>${event.city}, ${event.state}</td>

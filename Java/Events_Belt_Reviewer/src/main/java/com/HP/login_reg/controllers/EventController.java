@@ -2,10 +2,8 @@ package com.HP.login_reg.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.HP.login_reg.models.Event;
 import com.HP.login_reg.models.Message;
 import com.HP.login_reg.models.User;
@@ -39,35 +36,35 @@ public class EventController {
 	
 	@RequestMapping("")
 	public String events(@ModelAttribute("event")Event event,HttpSession session,Model model){
-		System.out.println("************1");
+		
 		long user_id =(long)session.getAttribute("id");
-		System.out.println("************2****"+user_id);
+		
 
 		User user = userService.findById(user_id);
 		System.out.println(user);
 		
-		ArrayList<Event> userStates     = eventService.findByState(user.getState());
-		System.out.println("************4");
+		ArrayList<Event> userStates = eventService.findByState(user.getState());
+		
 
-		//		ArrayList<Event> notUserStates = eventService.findNotByState(user.getState());
+		ArrayList<Event> notUserStates = eventService.findNotByState(user.getState());
 		model.addAttribute("userStates",userStates);
-//		model.addAttribute("notUserStates",notUserStates);
-		System.out.println("************5");
+        model.addAttribute("notUserStates",notUserStates);
+		
 
 		ArrayList<Event> allEvents = (ArrayList<Event>)eventService.all();
-		ArrayList<Event> notUserStates = new ArrayList <Event>();
-		System.out.println("************6");
+		ArrayList<Event> notUserStates1 = new ArrayList <Event>();
+		
 		
 		for(int i=0;i<allEvents.size();i++) {
 			if( !allEvents.get(i).getState().equals( user.getState() ) )
-				System.out.println("************7");
+				
 
 				notUserStates.add( allEvents.get(i) );
 		}		
-		System.out.println("************8");
+		
 
 		model.addAttribute("notUserStates",notUserStates);
-		System.out.println("************9");
+		
 		
 		return "events";
 	}
@@ -119,6 +116,22 @@ public class EventController {
 				eventService.update(e);}
 			}
 		return "redirect:/events/"+event_id;
+	}
+
+	public long getEvent_id() {
+		return event_id;
+	}
+
+	public void setEvent_id(long event_id) {
+		this.event_id = event_id;
+	}
+
+	public Object getUserStates() {
+		return userStates;
+	}
+
+	public void setUserStates(Object userStates) {
+		this.userStates = userStates;
 	}
 	
 	    		

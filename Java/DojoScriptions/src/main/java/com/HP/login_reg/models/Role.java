@@ -1,11 +1,8 @@
 package com.HP.login_reg.models;
-
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+
 
 @Entity
 public class Role{
@@ -13,16 +10,7 @@ public class Role{
 	@GeneratedValue
 	private Long id;
 	private String name;
-//	
-//	@ManyToMany(mappedBy = "roles")
-//	
-//	private List<User> users;
-//
-//	public Role(){
-//// INSERT INTO `roles` (name) VALUES ('ROLE_USER');
-//// INSERT INTO `roles` (name) VALUES ('ROLE_ADMIN')
-//		
-//	}
+
 
 	public Long getId() {
 		return id;
@@ -40,11 +28,4 @@ public class Role{
 		this.name = name;
 	}
 
-//	public List<User> getUsers() {
-//		return users;
-//	}
-//
-//	public void setUsers(List<User> users) {
-//		this.users = users;
-//	}
 }

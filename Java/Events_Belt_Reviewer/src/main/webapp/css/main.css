@@ -14,7 +14,6 @@ body {
 }
 
 #notinyours{
-	
 	border: 1px solid black;
 	text-align: center;
 	width: 700px;
@@ -22,6 +21,7 @@ body {
 	border-radius: 15px;
     margin: auto;
     background:white;
+    overflow: scroll;
 }
 
 #newevent{
@@ -37,7 +37,9 @@ body {
 }
 
 .h3{
-	underline
+	text-decoration-line: underline; 
 }
-
+.a{
+	table-layout: fixed;
+}
 

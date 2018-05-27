@@ -13,7 +13,7 @@ public class RouteController {
 	private UserService us;
 	
 	public RouteController(UserService us) {
-		this.us=us;
+		this.setUs(us);
 }
 	
 	@RequestMapping("")
@@ -23,5 +23,13 @@ public class RouteController {
 //		}else{
 //			return "redirect:/events"; 
 		}
+
+	public UserService getUs() {
+		return us;
+	}
+
+	public void setUs(UserService us) {
+		this.us = us;
+	}
 	}
 
