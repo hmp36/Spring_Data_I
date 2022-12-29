@@ -19,6 +19,6 @@
     "save": "^2.3.2"
   },
   "devDependencies": {
-    "@angular/cli": "^1.7.2"
+    "@angular/cli": "^15.0.4"
   }
 }
